@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module generateEconomicAgent('REA_EML_BC')]
+[template public generateElement(anEconomicAgent : REA_EML_BC::EconomicAgent, aREA_EML_BCM : REA_EML_BCM)]
+ <owl:NamedIndividual rdf:about="&[aREA_EML_BCM.ontologyNS/];[anEconomicAgent.name/]">
+        <rdf:type rdf:resource="&REA-EMO;EconomicAgent"/>
+[for (aParticipation : REA_EML_BC::participation | aREA_EML_BCM.participations)]
+	[if (aParticipation.economicAgent = anEconomicAgent)]
+		<REA-EMO:participationEconomicEvent_EconomicEvent rdf:resource="&[aREA_EML_BCM.ontologyNS/];[aParticipation.economicEvent.name/]"/>
+	[/if]
+[/for]
+ </owl:NamedIndividual>
+[/template]

@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:stardog="tag:stardog:api:"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessPolicyEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#OrganisationalUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<owl:equivalentClass rdf:resource="http://www.ugent.mis.be/ontologies/BMM#OrganisationUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<owl:equivalentClass rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Asset"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#stockflow_EconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEvent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#stockflow_EconomicResource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#view_OrganisationalUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#OrganisationalUnit"/>
+	<rdfs:domain rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_540"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#duality_DecrementEconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#duality_EconomicEvent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#duality_IncrementEconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#duality_IncrementEconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#duality_EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#participationEconomicEvent_EconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#particiaptionEconomicEvent_EconomicAgent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#duality_EconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_Commitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_EconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_DecrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_Commitment"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_DecrementEconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_DecrementEconomicEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_IncrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_Commitment"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_IncrementEconomocEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#grouping_BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityGroup"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessEntity"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#grouping_PolicyEntityGroup"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityGroup">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#grouping_PolicyEntityGroup">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityGroup"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessPolicyEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessPolicyEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#particiaptionEconomicEvent_EconomicAgent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#participationCommitment_Commitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#participationCommitment_EconomicAgent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_DecrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_IncrementCommitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_IncrementCommitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#specification_Commitment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEvent"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#specification_EconomicResource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#specification_EconomicResource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#Commitment"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#stockflow_EconomicResource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#typification_BusinessEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityType"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#typification_PolicyEntityType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityType"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessPolicyEntity"/>
+	<owl:inverseOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#typification_BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicBusinessProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentAffectsAchievementOfEnd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#End"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Assesment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#End">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentAffectsEmploymentOfMeans">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Means"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Means">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentCatgoeryCategorizesAssesment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#AssessmentCategory"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssessmentCategory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentIdentifiesPotentialImpact">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#PotentialImpact"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#PotentialImpact">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentIsJudgementOfInfluencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Influencer"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Influencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#AssesmentProvidesImpetusForDirective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Assesment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Directive">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessPolicyIsBasisOfBusinessRules">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessRule"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessPolicy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessPolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessRule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessProcessManagesAsset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Asset"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Asset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#BusinessProcessRealizesCourseOfAction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Means"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#CourseOfActionChannelsEffortsTowardsDesiredResult">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#DesiredResult"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#DesiredResult">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#End"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#CourseOfActionFormulatedBasedOnDirective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#DirectiveActsAsRegulation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Regulation"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Regulation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#ExternalInfluencer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#DirectiveGovernsCourseOfAction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#DirectiveSupportsAchievementOfDesiredResult">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#DesiredResult"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#GoalAmplifiesVision">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Vision"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Goal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Goal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#DesiredResult"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Vision">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#End"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#InfluencerCatagoryCategorizesInfluencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Influencer"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#InfluencerCategory"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#InfluencerCategory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisationIsSourceOfInfluencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Influencer"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#MissionMakesOperativeVision">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Vision"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Mission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Mission">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Means"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#ObjectiveQuantifiesGoal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Goal"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Objective"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Objective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#DesiredResult"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#OrganisationCategoryCategorizesInfluencingOrganisation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisation"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#OrganisationCategory"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#OrganisationCategory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#OrganisationUnitIsResponsibleForBusinessProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessProcess"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#OrganisationUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#OrganisationUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#PotentialImpactProvidesImpetusForDirective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Directive"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#PotentialImpact"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#StrategyIsAComponentOfThePlanForMission">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Mission"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Strategy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Strategy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#TacticEffectsEnforcementLevelOfBusinessRule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessRule"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Tactic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#CourseOfAction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#ExternalInfluencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Influencer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#InternalInfluencer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Influencer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#PotentialReward">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#PotentialImpact"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#Risk">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.ugent.mis.be/ontologies/BMM#PotentialImpact"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/BMM_REA-EMO">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+	<owl:imports rdf:resource="http://www.ugent.mis.be/ontologies/BMM"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.ugent.mis.be/ontologies/BMM#TacticImplementsStrategy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Strategy"/>
+	<rdfs:domain rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:imports rdf:resource="http://www.ugent.mis.be/ontologies/BMM"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#SysFishMission">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Mission"/>
+	<MissionMakesOperativeVision xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#SysFishVision"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distribute Fish in multiple cities for Restaurant Customers</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#SysFishVision">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Vision"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Be the fish seller of choice for restaurants in the cities in which we operate.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Goal1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Goal"/>
+	<GoalAmplifiesVision xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#SysFishVision"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To provide sector-leading customer support</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Goal2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Goal"/>
+	<GoalAmplifiesVision xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#SysFishVision"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To sell Fish of High Quality to Restaurants</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Strategy3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Strategy"/>
+	<CourseOfActionChannelsEffortsTowardsDesiredResult xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Goal1"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employees must be able to perform many duties</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Strategy2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Strategy"/>
+	<CourseOfActionChannelsEffortsTowardsDesiredResult xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Goal2"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sell local favourites to restaurants</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Tactic4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+	<TacticImplementsStrategy xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Strategy3"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hire generalists</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Tactic3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+	<TacticImplementsStrategy xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Strategy2"/>
+	<TacticImplementsStrategy xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Straregy1"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purchase from local Fishers</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Straregy1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Strategy"/>
+	<CourseOfActionChannelsEffortsTowardsDesiredResult xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Goal2"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sell Fresh Fish</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Tactic1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+	<TacticImplementsStrategy xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Straregy1"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clean at store</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm#Tactic2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.ugent.mis.be/ontologies/BMM#Tactic"/>
+	<TacticImplementsStrategy xmlns="http://www.ugent.mis.be/ontologies/BMM#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish_bmm#Straregy1"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliver to Restaurant Customers</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcessContainsBusinessEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Fish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanIn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#FishType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+	<policyRelationship_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fish"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Employee">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<businessRelationship_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#LaborType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity"/>
+	<policyRelationship_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Labor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Money">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Labor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanIn"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborUse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Truck">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckLease"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#UseTruck"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckUse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Store">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<businessRelationship_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Employee"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#LeasingCompany">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<businessRelationship_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Truck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#UseTruck"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborUse"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fish"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fisherman"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#UseTruck"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborUse"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#IdentifyFishNeeds"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#IdentifyFishers"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#DriveTruckToDock"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Barter"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PreperarePurchaseOrder"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LoadFish"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#DriveTruckToStore"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#NotifyCleaners"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#UnloadTruck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Cash">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashReceipt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+	<duality_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Sysfish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition"/>
+	<duality_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#SalePayment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckUse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckLease"/>
+	<duality_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Sysfish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CleanedFish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+	<stockflow_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanOut"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#FishSale">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+	<duality_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#TruckLease">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Fisherman">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#SysFish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#OrganisationalUnit"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForFish"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckLease"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Worker">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Customer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#TruckRental">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckLease"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CleanIn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanOut"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CleanOut">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanIn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Cleaner">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanIn"/>
+	<participationEconomicEvent_EconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanOut"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Sysfish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#OrganisationalUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CashReceipt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Sysfish"/>
+	<duality_DecrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashProcurement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#CashProcurement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Sysfish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashReceipt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#UseTruck">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#LaborUse">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishPurchase"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#IdentifyFishNeeds">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fish"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#IdentifyFishers">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fisherman"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#DriveTruckToDock">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Truck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Barter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fisherman"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#PreperarePurchaseOrder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#LoadFish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Fish"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#DriveTruckToStore">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Truck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#NotifyCleaners">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Cleaner"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#UnloadTruck">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+	<involves_BusinessEntity xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Truck"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#TruckAcquisition">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#PaymentForTruck"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckLease"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#Financing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashReceipt"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashProcurement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#PayRoll">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CashDisbursementLabor"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborAcquisition"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#FishSelling">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishSale"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#TruckUse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#TruckUse">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<view_OrganisationalUnit xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SysFish"/>
+	<duality_IncrementEconomicEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#SalePayment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:swrl#y">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:swrl#z">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:swrl#x">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/sysfish#FishCleaning">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanIn"/>
+	<BusinessProcessContainsBusinessEvent xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#" rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#CleanOut"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_IncrementEconomocEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdfs:domain rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_EconomicEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_540">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_541"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_541">
+	<rdf:first rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_542"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_542">
+	<rdf:first rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_543"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_543">
+	<rdf:first rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_544"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_544">
+	<rdf:first rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_545">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+	<head xmlns="http://www.w3.org/2003/11/swrl#" rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_546"/>
+	<body xmlns="http://www.w3.org/2003/11/swrl#" rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_548"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_546">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_547"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_547">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+	<propertyPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.ugent.mis.be/ontologies/BMM#BusinessProcessManagesAsset"/>
+	<argument2 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#x"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#z"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_548">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_549"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_550"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_549">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#y"/>
+	<classPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_550">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_551"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_552"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_551">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#z"/>
+	<classPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_552">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_557"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_553"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_553">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_556"/>
+	<rdf:rest rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_554"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_554">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+	<rdf:first rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_555"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_555">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+	<propertyPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#involves_BusinessEvent"/>
+	<argument2 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#y"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#x"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_556">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+	<propertyPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcessContainsBusinessEvent"/>
+	<argument2 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#y"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#z"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_557">
+	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+	<argument1 xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="urn:swrl#x"/>
+	<classPredicate xmlns="http://www.w3.org/2003/11/swrl#" rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_558">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<rdfs:label xml:lang="en"></rdfs:label>
+	<owl:annotatedProperty rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessEntity"/>
+	<owl:annotatedSource rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborType"/>
+	<owl:annotatedTarget rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Labor"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_559">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<rdfs:label xml:lang="en">worksAt</rdfs:label>
+	<owl:annotatedProperty rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+	<owl:annotatedSource rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Store"/>
+	<owl:annotatedTarget rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Employee"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_560">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<rdfs:label xml:lang="en">specializes</rdfs:label>
+	<owl:annotatedProperty rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+	<owl:annotatedSource rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#FishType"/>
+	<owl:annotatedTarget rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Store"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_561">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<rdfs:label xml:lang="en">performs</rdfs:label>
+	<owl:annotatedProperty rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+	<owl:annotatedSource rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Employee"/>
+	<owl:annotatedTarget rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LaborType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="bnode_b4a9e0d5_f150_4c43_8e8b_d58b1e67e47b_562">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<rdfs:label xml:lang="en">leasedFrom</rdfs:label>
+	<owl:annotatedProperty rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity"/>
+	<owl:annotatedSource rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#LeasingCompany"/>
+	<owl:annotatedTarget rdf:resource="http://www.mis.ugent.be/ontologies/sysfish#Truck"/>
+</rdf:Description>
+
+</rdf:RDF>

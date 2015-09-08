@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module generateBusinessEntity('REA_EML_BE')]
+
+[template public generateElement(aBusinessEntity : BusinessEntity, aREA_EML_BEM : REA_EML_BEM)]
+
+[if (aBusinessEntity.oclIsTypeOf(REA_EML_BE::PolicyEntity)) ]
+ <owl:NamedIndividual rdf:about="&[aREA_EML_BEM.ontologyNS/];[aBusinessEntity.name/]">
+ 	<rdf:type rdf:resource="&REA-EMO;PolicyEntity"/>
+[for (aBusinessRelationship : BusinessRelationship | aREA_EML_BEM.businessRelationships)]
+[if (aBusinessRelationship.oclIsTypeOf(PolicyRelationship)) ]
+	[if (aBusinessRelationship.oclAsType(PolicyRelationship).policyEntity = aBusinessEntity)]
+	<REA-EMO:policyRelationship_BusinessEntity rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.oclAsType(PolicyRelationship).businessEntity.name/]"/>
+	[/if]
+[/if]
+[/for]
+ </owl:NamedIndividual>
+[else]
+ <owl:NamedIndividual rdf:about="&[aREA_EML_BEM.ontologyNS/];[aBusinessEntity.name/]">
+ 	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+[for (aBusinessRelationship : BusinessRelationship | aREA_EML_BEM.businessRelationships)]
+	[if (aBusinessRelationship.source = aBusinessEntity)]
+	<REA-EMO:businessRelationship_BusinessEntity rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.target.name/]"/>
+	[/if]
+[/for]
+ </owl:NamedIndividual>
+[/if]
+[/template]

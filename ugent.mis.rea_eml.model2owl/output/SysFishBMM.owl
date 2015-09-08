@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY BMM "http://www.ugent.mis.be/ontologies/BMM#" >
+    <!ENTITY sysfish_bmm "http://www.mis.ugent.be/ontologies/sysfish_bmm#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF xmlns="http://www.mis.ugent.be/ontologies/sysfish_bmm#"
+     xml:base="http://www.mis.ugent.be/ontologies/sysfish_bmm"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:BMM="http://www.ugent.mis.be/ontologies/BMM#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:sysfish_bmm="http://www.mis.ugent.be/ontologies/sysfish_bmm">
+    <owl:Ontology rdf:about="http://www.mis.ugent.be/ontologies/sysfish_bmm">
+        <owl:imports rdf:resource="http://www.ugent.mis.be/ontologies/BMM"/>
+    </owl:Ontology>
+
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;SysFishMission">
+ 				<rdf:type rdf:resource="&BMM;Mission"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Distribute Fish in multiple cities for Restaurant Customers</rdfs:comment>
+ 				<BMM:MissionMakesOperativeVision rdf:resource="&sysfish_bmm;SysFishVision"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;SysFishVision">
+ 				<rdf:type rdf:resource="&BMM;Vision"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Be the fish seller of choice for restaurants in the cities in which we operate.</rdfs:comment>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Goal1">
+ 				<rdf:type rdf:resource="&BMM;Goal"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">To provide sector-leading customer support</rdfs:comment>
+ 				<BMM:GoalAmplifiesVision rdf:resource="&sysfish_bmm;SysFishVision"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Goal2">
+ 				<rdf:type rdf:resource="&BMM;Goal"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">To sell Fish of High Quality to Restaurants</rdfs:comment>
+ 				<BMM:GoalAmplifiesVision rdf:resource="&sysfish_bmm;SysFishVision"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Strategy3">
+ 				<rdf:type rdf:resource="&BMM;Strategy"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Employees must be able to perform many duties</rdfs:comment>
+ 				<BMM:CourseOfActionChannelsEffortsTowardsDesiredResult rdf:resource="&sysfish_bmm;Goal1"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Strategy2">
+ 				<rdf:type rdf:resource="&BMM;Strategy"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Sell local favourites to restaurants</rdfs:comment>
+ 				<BMM:CourseOfActionChannelsEffortsTowardsDesiredResult rdf:resource="&sysfish_bmm;Goal2"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Tactic4">
+ 				<rdf:type rdf:resource="&BMM;Tactic"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Hire generalists</rdfs:comment>
+ 				<BMM:TacticImplementsStrategy rdf:resource="&sysfish_bmm;Strategy3"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Tactic3">
+ 				<rdf:type rdf:resource="&BMM;Tactic"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Purchase from local Fishers</rdfs:comment>
+ 				<BMM:TacticImplementsStrategy rdf:resource="&sysfish_bmm;Strategy2"/>
+ 				<BMM:TacticImplementsStrategy rdf:resource="&sysfish_bmm;Straregy1"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Straregy1">
+ 				<rdf:type rdf:resource="&BMM;Strategy"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Sell Fresh Fish</rdfs:comment>
+ 				<BMM:CourseOfActionChannelsEffortsTowardsDesiredResult rdf:resource="&sysfish_bmm;Goal2"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Tactic1">
+ 				<rdf:type rdf:resource="&BMM;Tactic"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Clean at store</rdfs:comment>
+ 				<BMM:TacticImplementsStrategy rdf:resource="&sysfish_bmm;Straregy1"/>
+ 			 </owl:NamedIndividual>
+ 			<owl:NamedIndividual rdf:about="&sysfish_bmm;Tactic2">
+ 				<rdf:type rdf:resource="&BMM;Tactic"/>
+ 			    <rdfs:comment rdf:datatype="&xsd;string">Deliver to Restaurant Customers</rdfs:comment>
+ 				<BMM:TacticImplementsStrategy rdf:resource="&sysfish_bmm;Straregy1"/>
+ 			 </owl:NamedIndividual>
+</rdf:RDF>
+

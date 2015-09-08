@@ -1,0 +1,52 @@
+[comment encoding = UTF-8 /]
+[module REA_EML_BPM2OWL('REA_EML_BP')/]
+[import ugent::mis::rea_eml::model2owl::bpm::generateBusinessEvent /]
+[import ugent::mis::rea_eml::model2owl::bpm::generateBusinessEntity /]
+
+
+[template public REA_EML_BCM2OWL(aREA_EML_BPM : REA_EML_BPM)]
+	
+
+[comment @main /]
+[file (aREA_EML_BPM.name.concat('.owl'), false, 'UTF-8')]
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [ '[' /] 
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY REA-EMO "http://www.mis.ugent.be/ontologies/REA-EMO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY [aREA_EML_BPM.ontologyNS/] "[aREA_EML_BPM.ontologyURI/]#" >
+]>
+
+<rdf:RDF xmlns="[aREA_EML_BPM.ontologyURI/]#"
+     xml:base="[aREA_EML_BPM.ontologyURI/]"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:REA-EMO="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:[aREA_EML_BPM.ontologyNS/]="[aREA_EML_BPM.ontologyURI/]">
+    <owl:Ontology rdf:about="[aREA_EML_BPM.ontologyURI/]">
+        <owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+    </owl:Ontology>
+
+<owl:NamedIndividual rdf:about="&[aREA_EML_BPM.ontologyNS/];[aREA_EML_BPM.businessProcess/]">
+        <rdf:type rdf:resource="&REA-EMO;BusinessProcess"/>
+
+[for (aBusinessEvent : BusinessEvent | aREA_EML_BPM.businessEvents)]
+	<REA-EMO:BusinessProcessContainsBusinessEvent rdf:resource="&[aREA_EML_BPM.ontologyNS/];[aBusinessEvent.name/]"/>
+[/for]
+</owl:NamedIndividual>
+
+[for (aBusinessEvent : REA_EML_BP::BusinessEvent | aREA_EML_BPM.businessEvents)]
+ [aBusinessEvent.generateElement(aREA_EML_BPM)/]
+[/for]
+[for (aBusinessEntity : REA_EML_BP::BusinessEntity | aREA_EML_BPM.businessEntities)]
+ [aBusinessEntity.generateElement(aREA_EML_BPM)/]
+[/for]
+
+</rdf:RDF>
+[/file]
+[/template]

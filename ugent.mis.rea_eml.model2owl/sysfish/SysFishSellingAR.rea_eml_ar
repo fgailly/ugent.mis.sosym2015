@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_AR:REA_EML_ARM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_AR="REA_EML_AR" name="FishSellingAR" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish" organisationalUnit="SysFish" businessProcess="FishSelling">
+  <economicEvents xsi:type="REA_EML_AR:IncrementEconomicEvent" name="SalePayment"/>
+  <economicEvents xsi:type="REA_EML_AR:DecrementEconomicEvent" name="FishSale"/>
+  <economicEvents xsi:type="REA_EML_AR:DecrementEconomicEvent" name="TruckUse"/>
+  <economicResources name="CleanedFish"/>
+  <economicResources name="Cash"/>
+  <economicResources name="Labor"/>
+  <economicResources name="Truck"/>
+  <dualities decrementEconomicEvent="//@economicEvents.1" incrementEconomicEvent="//@economicEvents.0"/>
+  <dualities decrementEconomicEvent="//@economicEvents.2" incrementEconomicEvent="//@economicEvents.0"/>
+  <stockflows economicEvent="//@economicEvents.1" economicResouce="//@economicResources.0"/>
+  <stockflows economicEvent="//@economicEvents.0" economicResouce="//@economicResources.1"/>
+  <stockflows economicEvent="//@economicEvents.1" economicResouce="//@economicResources.2"/>
+  <stockflows economicEvent="//@economicEvents.2" economicResouce="//@economicResources.3"/>
+</REA_EML_AR:REA_EML_ARM>

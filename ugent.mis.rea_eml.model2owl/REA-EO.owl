@@ -1,0 +1,558 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rea: <http://purl.org/REA/REA-EO#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://purl.org/REA/REA-EO>
+
+Annotations: 
+    dc:creator "system"^^xsd:string,
+    dc:date "1 september 2008"^^xsd:string,
+    dc:creator "fgailly"^^xsd:string,
+    dc:date "Dec 4, 2013 6:02:47 AM"^^xsd:dateTime,
+    dc:creator "Frederik Gailly, Geert Poels"^^xsd:string,
+    dc:title "Resource Event Agent Enterprise ontology"^^xsd:string,
+    rdfs:comment "This ontology was generated from an ontology revision in WebProtégé http://webprotege.stanford.edu"^^xsd:string,
+    owl:versionInfo "1.1"^^xsd:string,
+    rdfs:comment "Resource Event Agent Enterprise Ontology"^^xsd:string
+
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: dc:creator
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: dc:title
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: rea:transitionedBy_BusinessRelationship
+
+    Annotations: 
+        rdfs:label "transitionedBy_BusinessRelationshipState
+"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        rea:BusinessRelationshipState
+    
+    Range: 
+        rea:BusinessEvent
+    
+    
+ObjectProperty: rea:view
+
+    Domain: 
+        rea:DecrementCommitment
+         or rea:DecrementEconomicEvent
+         or rea:IncrementCommitment
+         or rea:IncrementEconomicEvent
+    
+    Range: 
+        rea:OrganisationUnit
+    
+    
+ObjectProperty: rea:decrementEconomicEvent_DecrementFulfillment
+
+    SubPropertyOf: 
+        rea:economicEvent_Fulfillment
+    
+    Domain: 
+        rea:DecrementFulfillment
+    
+    Range: 
+        rea:DecrementEconomicEvent
+    
+    
+ObjectProperty: rea:participationCommitment
+
+    Annotations: 
+        rdfs:label "participationCommitment"
+    
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:Commitment
+    
+    Range: 
+        rea:EconomicAgent
+    
+    
+ObjectProperty: rea:transitionedBy_BusinessEntityState
+
+    Domain: 
+        rea:BusinessEntityState
+    
+    Range: 
+        rea:BusinessEvent
+    
+    
+ObjectProperty: rea:businessPolicyEntity_BusinessPolicyrelationship
+
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:BusinessPolicyRelationship
+    
+    Range: 
+        rea:BusinessPolicyEntity
+    
+    
+ObjectProperty: rea:commitment_Fulfillment
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        rea:Fulfillment
+    
+    Range: 
+        rea:Fulfillment
+    
+    
+ObjectProperty: rea:incrementCommitment_Reciprocity
+
+    Domain: 
+        rea:Reciprocity
+    
+    Range: 
+        rea:IncrementCommitment
+    
+    
+ObjectProperty: rea:businessEntityType_Typification
+
+    SubPropertyOf: 
+        rea:businessPolicyEntity_BusinessPolicyrelationship
+    
+    Domain: 
+        rea:Typfication
+    
+    Range: 
+        rea:BusinessEntityType
+    
+    
+ObjectProperty: rea:businessEntity_BusinessPolicyrelationship
+
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:BusinessPolicyRelationship
+    
+    Range: 
+        rea:BusinessEntity
+    
+    
+ObjectProperty: rea:businessEntity_BusinessRelationship
+
+    Domain: 
+        rea:BusinessRelationship
+    
+    Range: 
+        rea:BusinessEntity
+    
+    
+ObjectProperty: rea:hasState_BusinessEntity
+
+    Domain: 
+        rea:BusinessEntity
+    
+    Range: 
+        rea:BusinessEntityState
+    
+    
+ObjectProperty: rea:businessEntity_Grouping
+
+    SubPropertyOf: 
+        rea:businessEntity_BusinessPolicyrelationship
+    
+    Domain: 
+        rea:Grouping
+    
+    Range: 
+        rea:BusinessEntity
+    
+    
+ObjectProperty: rea:incrementCommitment_IncrementFulfillment
+
+    SubPropertyOf: 
+        rea:commitment_Fulfillment
+    
+    Domain: 
+        rea:IncrementFulfillment
+    
+    Range: 
+        rea:IncrementCommitment
+    
+    
+ObjectProperty: rea:specification
+
+    Annotations: 
+        rdfs:label "specification"
+    
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:Commitment
+    
+    Range: 
+        rea:EconomicResource
+    
+    
+ObjectProperty: rea:hasState_BusinessRelationship
+
+    Domain: 
+        rea:BusinessRelationship
+    
+    Range: 
+        rea:BusinessRelationshipState
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: rea:businessEntity_Typification
+
+    SubPropertyOf: 
+        rea:businessEntity_BusinessPolicyrelationship
+    
+    Domain: 
+        rea:Typfication
+    
+    Range: 
+        rea:BusinessEntity
+    
+    
+ObjectProperty: rea:incrementEconomicEvent_Duality
+
+    Domain: 
+        rea:Duality
+    
+    Range: 
+        rea:IncrementEconomicEvent
+    
+    
+ObjectProperty: rea:decrementCommitment_DecrementCommitment
+
+    SubPropertyOf: 
+        rea:commitment_Fulfillment
+    
+    Domain: 
+        rea:DecrementFulfillment
+    
+    Range: 
+        rea:DecrementCommitment
+    
+    
+ObjectProperty: rea:decrementCommitment_Reciprocity
+
+    Domain: 
+        rea:Reciprocity
+    
+    Range: 
+        rea:DecrementCommitment
+    
+    
+ObjectProperty: rea:participationEconomicEvent
+
+    Annotations: 
+        rdfs:label "participationEconomicEvent"
+    
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:EconomicEvent
+    
+    Range: 
+        rea:EconomicAgent
+    
+    
+ObjectProperty: rea:incrementEconomicEvent_IncrementFulfillment
+
+    SubPropertyOf: 
+        rea:economicEvent_Fulfillment
+    
+    Domain: 
+        rea:IncrementFulfillment
+    
+    Range: 
+        rea:EconomicAgent
+    
+    
+ObjectProperty: rea:decrementEconomicEvent_Duality
+
+    Domain: 
+        rea:Duality
+    
+    Range: 
+        rea:DecrementEconomicEvent
+    
+    
+ObjectProperty: rea:businessEntityGroup_Grouping
+
+    SubPropertyOf: 
+        rea:businessPolicyEntity_BusinessPolicyrelationship
+    
+    Domain: 
+        rea:Grouping
+    
+    Range: 
+        rea:BusinessEntitygroup
+    
+    
+ObjectProperty: rea:economicEvent_Fulfillment
+
+    Domain: 
+        rea:Fulfillment
+    
+    Range: 
+        rea:EconomicEvent
+    
+    
+ObjectProperty: rea:stockflow
+
+    Annotations: 
+        rdfs:label "stockflow"
+    
+    SubPropertyOf: 
+        rea:businessEntity_BusinessRelationship
+    
+    Domain: 
+        rea:EconomicEvent
+    
+    Range: 
+        rea:EconomicResource
+    
+    
+Class: owl:Thing
+
+    
+Class: rea:DecrementCommitment
+
+    Annotations: 
+        rdfs:label "DecrementCommitment"
+    
+    SubClassOf: 
+        rea:Commitment
+    
+    
+Class: rea:BusinessPolicyEntity
+
+    Annotations: 
+        rdfs:label "BusinessPolicyEntity"
+    
+    SubClassOf: 
+        rea:BusinessEntity
+    
+    
+Class: rea:BusinessEntity
+
+    
+Class: rea:EconomicAgent
+
+    Annotations: 
+        rdfs:comment "Is an individual or organization capable of having control over economic resources, and transferring or receiving the control to or from other individuals or organizations."^^xsd:string
+    
+    SubClassOf: 
+        rea:BusinessEntity
+    
+    DisjointWith: 
+        rea:EconomicEvent, rea:EconomicResource
+    
+    
+Class: rea:InsideEconomicAgent
+
+    Annotations: 
+        rdfs:label "InsideEconomicAgent"
+    
+    SubClassOf: 
+        rea:EconomicAgent
+    
+    
+Class: rea:EconomicEvent
+
+    Annotations: 
+        rdfs:comment "Represent either an increment or a decrement in the value of economic resources that are under control of the enterprise."@en
+    
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    DisjointWith: 
+        rea:EconomicAgent, rea:EconomicResource
+    
+    
+Class: rea:Typfication
+
+    Annotations: 
+        rdfs:label "Typification"
+    
+    SubClassOf: 
+        rea:BusinessPolicyRelationship
+    
+    
+Class: rea:BusinessRelationship
+
+    Annotations: 
+        rdfs:label "BusinessRelationship"
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: rea:Reciprocity
+
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    
+Class: rea:IncrementCommitment
+
+    Annotations: 
+        rdfs:label "IncrementCommitment"
+    
+    SubClassOf: 
+        rea:Commitment
+    
+    
+Class: rea:Commitment
+
+    Annotations: 
+        rdfs:comment "Is a promise or obligation of economic agents to perform an economic event in the future"^^xsd:string
+    
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    
+Class: rea:EconomicResource
+
+    Annotations: 
+        rdfs:comment "A thing that is scarce and has utility for economic agents and is something users of business applications want to plan, monitor and control."@en
+    
+    SubClassOf: 
+        rea:BusinessEntity
+    
+    DisjointWith: 
+        rea:EconomicAgent, rea:EconomicEvent
+    
+    
+Class: rea:Duality
+
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    
+Class: rea:DecrementEconomicEvent
+
+    Annotations: 
+        rdfs:label "DecrementEconomicEvent"
+    
+    SubClassOf: 
+        rea:EconomicEvent
+    
+    
+Class: rea:OrganisationUnit
+
+    Annotations: 
+        rdfs:label "OrganisationUnit"
+    
+    SubClassOf: 
+        rea:BusinessEntity
+    
+    
+Class: rea:Grouping
+
+    Annotations: 
+        rdfs:label "Grouping"
+    
+    SubClassOf: 
+        rea:BusinessPolicyRelationship
+    
+    
+Class: rea:BusinessEntitygroup
+
+    Annotations: 
+        rdfs:label "BusinessEntityGroup"
+    
+    SubClassOf: 
+        rea:BusinessPolicyEntity
+    
+    
+Class: rea:Fulfillment
+
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    
+Class: rea:DecrementFulfillment
+
+    SubClassOf: 
+        rea:Fulfillment
+    
+    
+Class: rea:IncrementEconomicEvent
+
+    SubClassOf: 
+        rea:EconomicEvent
+    
+    
+Class: rea:BusinessPolicyRelationship
+
+    SubClassOf: 
+        rea:BusinessRelationship
+    
+    
+Class: rea:BusinessEntityState
+
+    
+Class: rea:BusinessEntityType
+
+    Annotations: 
+        rdfs:label "BusinessEntityType"
+    
+    SubClassOf: 
+        rea:BusinessPolicyEntity
+    
+    
+Class: rea:BusinessEvent
+
+    Annotations: 
+        rdfs:label "BusinessEvent"
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: rea:IncrementFulfillment
+
+    SubClassOf: 
+        rea:Fulfillment
+    
+    
+Class: rea:BusinessRelationshipState
+
+    

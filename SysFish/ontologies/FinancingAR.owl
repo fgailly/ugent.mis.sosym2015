@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [ 
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY REA-EMO "http://www.mis.ugent.be/ontologies/REA-EMO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sysfish "http://www.mis.ugent.be/ontologies/sysfish#" >
+]>
+
+<rdf:RDF xmlns="http://www.mis.ugent.be/ontologies/sysfish#"
+     xml:base="http://www.mis.ugent.be/ontologies/sysfish"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:REA-EMO="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sysfish="http://www.mis.ugent.be/ontologies/sysfish">
+    <owl:Ontology rdf:about="http://www.mis.ugent.be/ontologies/sysfish">
+        <owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+    </owl:Ontology>
+
+  <owl:NamedIndividual rdf:about="&sysfish;Sysfish">
+        <rdf:type rdf:resource="&REA-EMO;OrganisationalUnit"/>
+    </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="&sysfish;Financing">
+        <rdf:type rdf:resource="&REA-EMO;BusinessProcess"/>
+
+	<REA-EMO:BusinessProcessContainsBusinessEvent rdf:resource="&sysfish;CashReceipt"/>
+	<REA-EMO:BusinessProcessContainsBusinessEvent rdf:resource="&sysfish;CashProcurement"/>
+</owl:NamedIndividual>
+
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Cash">
+  	<rdf:type rdf:resource="&REA-EMO;EconomicResource"/>
+ 	<REA-EMO:stockflow_EconomicEvent rdf:resource="&sysfish;CashReceipt"/>
+ 	<REA-EMO:stockflow_EconomicEvent rdf:resource="&sysfish;CashReceipt"/>
+  </owl:NamedIndividual>
+ 
+ <owl:NamedIndividual rdf:about="&sysfish;CashReceipt">
+ 	<rdf:type rdf:resource="&REA-EMO;IncrementEconomicEvent"/>
+ 	<REA-EMO:view_OrganisationalUnit rdf:resource="&sysfish;Sysfish"/>
+ 	<REA-EMO:duality_DecrementEconomicEvent rdf:resource="&sysfish;CashProcurement"/>
+ </owl:NamedIndividual>
+ 
+ 
+ <owl:NamedIndividual rdf:about="&sysfish;CashProcurement">
+ 	<rdf:type rdf:resource="&REA-EMO;DecrementEconomicEvent"/>
+ 	<REA-EMO:view_OrganisationalUnit rdf:resource="&sysfish;Sysfish"/>
+ 	<REA-EMO:duality_IncrementEconomicEvent rdf:resource="&sysfish;CashReceipt"/>
+ </owl:NamedIndividual>
+ 
+</rdf:RDF>

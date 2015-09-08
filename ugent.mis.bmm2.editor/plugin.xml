@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated BMM -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="BMM.presentation.BMMModelWizardID"
+            name="%_UI_BMMModelWizard_label"
+            class="BMM.presentation.BMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BMMModelFile.gif">
+         <description>%_UI_BMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BMM -->
+      <editor
+            id="BMM.presentation.BMMEditorID"
+            name="%_UI_BMMEditor_label"
+            icon="icons/full/obj16/BMMModelFile.gif"
+            extensions="bmm"
+            class="BMM.presentation.BMMEditor"
+            contributorClass="BMM.presentation.BMMActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

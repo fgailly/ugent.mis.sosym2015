@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated REA-EML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="REA_EML.presentation.REA_EMLModelWizardID"
+            name="%_UI_REA_EMLModelWizard_label"
+            class="REA_EML.presentation.REA_EMLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REA_EMLModelFile.gif">
+         <description>%_UI_REA_EMLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated REA-EML -->
+      <editor
+            id="REA_EML.presentation.REA_EMLEditorID"
+            name="%_UI_REA_EMLEditor_label"
+            icon="icons/full/obj16/REA_EMLModelFile.gif"
+            extensions="rea_eml"
+            class="REA_EML.presentation.REA_EMLEditor"
+            contributorClass="REA_EML.presentation.REA_EMLActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated REA-EML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="REA_EML.REA_EML_AR.presentation.REA_EML_ARModelWizardID"
+            name="%_UI_REA_EML_ARModelWizard_label"
+            class="REA_EML.REA_EML_AR.presentation.REA_EML_ARModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REA_EML_ARModelFile.gif">
+         <description>%_UI_REA_EML_ARModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated REA-EML -->
+      <editor
+            id="REA_EML.REA_EML_AR.presentation.REA_EML_AREditorID"
+            name="%_UI_REA_EML_AREditor_label"
+            icon="icons/full/obj16/REA_EML_ARModelFile.gif"
+            extensions="rea_eml_ar"
+            class="REA_EML.REA_EML_AR.presentation.REA_EML_AREditor"
+            contributorClass="REA_EML.REA_EML_AR.presentation.REA_EML_ARActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated REA-EML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="REA_EML.REA_EML_BC.presentation.REA_EML_BCModelWizardID"
+            name="%_UI_REA_EML_BCModelWizard_label"
+            class="REA_EML.REA_EML_BC.presentation.REA_EML_BCModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REA_EML_BCModelFile.gif">
+         <description>%_UI_REA_EML_BCModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated REA-EML -->
+      <editor
+            id="REA_EML.REA_EML_BC.presentation.REA_EML_BCEditorID"
+            name="%_UI_REA_EML_BCEditor_label"
+            icon="icons/full/obj16/REA_EML_BCModelFile.gif"
+            extensions="rea_eml_bc"
+            class="REA_EML.REA_EML_BC.presentation.REA_EML_BCEditor"
+            contributorClass="REA_EML.REA_EML_BC.presentation.REA_EML_BCActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated REA-EML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="REA_EML.REA_EML_BE.presentation.REA_EML_BEModelWizardID"
+            name="%_UI_REA_EML_BEModelWizard_label"
+            class="REA_EML.REA_EML_BE.presentation.REA_EML_BEModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REA_EML_BEModelFile.gif">
+         <description>%_UI_REA_EML_BEModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated REA-EML -->
+      <editor
+            id="REA_EML.REA_EML_BE.presentation.REA_EML_BEEditorID"
+            name="%_UI_REA_EML_BEEditor_label"
+            icon="icons/full/obj16/REA_EML_BEModelFile.gif"
+            extensions="rea_eml_be"
+            class="REA_EML.REA_EML_BE.presentation.REA_EML_BEEditor"
+            contributorClass="REA_EML.REA_EML_BE.presentation.REA_EML_BEActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated REA-EML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="REA_EML.REA_EML_BP.presentation.REA_EML_BPModelWizardID"
+            name="%_UI_REA_EML_BPModelWizard_label"
+            class="REA_EML.REA_EML_BP.presentation.REA_EML_BPModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/REA_EML_BPModelFile.gif">
+         <description>%_UI_REA_EML_BPModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated REA-EML -->
+      <editor
+            id="REA_EML.REA_EML_BP.presentation.REA_EML_BPEditorID"
+            name="%_UI_REA_EML_BPEditor_label"
+            icon="icons/full/obj16/REA_EML_BPModelFile.gif"
+            extensions="rea_eml_bp"
+            class="REA_EML.REA_EML_BP.presentation.REA_EML_BPEditor"
+            contributorClass="REA_EML.REA_EML_BP.presentation.REA_EML_BPActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="REA_EML" nsURI="REA_EML" nsPrefix="REA_EML">
+  <eClassifiers xsi:type="ecore:EEnum" name="Operator">
+    <eLiterals name="equals"/>
+    <eLiterals name="lessThan" value="1"/>
+    <eLiterals name="greaterThan" value="2"/>
+    <eLiterals name="memberOf" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ontologyURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ontologyNS" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eSubpackages name="REA_EML_AR" nsURI="REA_EML_AR" nsPrefix="REA_EML_AR">
+    <eClassifiers xsi:type="ecore:EClass" name="IncrementEconomicEvent" eSuperTypes="#//REA_EML_AR/EconomicEvent"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DecrementEconomicEvent" eSuperTypes="#//REA_EML_AR/EconomicEvent"/>
+    <eClassifiers xsi:type="ecore:EClass" name="duality" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decrementEconomicEvent"
+          lowerBound="1" eType="#//REA_EML_AR/DecrementEconomicEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incrementEconomicEvent"
+          lowerBound="1" eType="#//REA_EML_AR/IncrementEconomicEvent"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IncrementCommitment" eSuperTypes="#//REA_EML_AR/Commitment"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DecrementCommitment" eSuperTypes="#//REA_EML_AR/Commitment"/>
+    <eClassifiers xsi:type="ecore:EClass" name="reciprocity" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DecrementCommitment"
+          lowerBound="1" eType="#//REA_EML_AR/DecrementCommitment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="IncrementCommitment"
+          lowerBound="1" eType="#//REA_EML_AR/IncrementCommitment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="REA_EML_ARM" eSuperTypes="#//Model">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvents" upperBound="-1"
+          eType="#//REA_EML_AR/EconomicEvent" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResources" upperBound="-1"
+          eType="#//REA_EML_AR/EconomicResource" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicAgents" upperBound="-1"
+          eType="#//REA_EML_AR/EconomicAgent" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dualities" upperBound="-1"
+          eType="#//REA_EML_AR/duality" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitments" upperBound="-1"
+          eType="#//REA_EML_AR/Commitment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reciprocities" upperBound="-1"
+          eType="#//REA_EML_AR/reciprocity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stockflows" upperBound="-1"
+          eType="#//REA_EML_AR/stockflow" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participations" upperBound="-1"
+          eType="#//REA_EML_AR/participation" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="fulfillments" upperBound="-1"
+          eType="#//REA_EML_AR/fulfillment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specifications" upperBound="-1"
+          eType="#//REA_EML_AR/specification" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="organisationalUnit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessProcess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicEvent" abstract="true" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicResource" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicAgent" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Commitment" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="specification" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="1"
+          eType="#//REA_EML_AR/Commitment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResouce" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicResource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="stockflow" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResouce" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicResource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="fulfillment" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="1"
+          eType="#//REA_EML_AR/Commitment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="participation" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicAgent" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicAgent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_AR/EconomicEvent"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="REA_EML_BC" nsURI="REA_EML_BC" nsPrefix="REA_EML_BC">
+    <eClassifiers xsi:type="ecore:EClass" name="REA_EML_BCM" eSuperTypes="#//Model">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResources" upperBound="-1"
+          eType="#//REA_EML_BC/EconomicResource" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicAgents" upperBound="-1"
+          eType="#//REA_EML_BC/EconomicAgent" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvents" upperBound="-1"
+          eType="#//REA_EML_BC/EconomicEvent" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitments" upperBound="-1"
+          eType="#//REA_EML_BC/Commitment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dualities" upperBound="-1"
+          eType="#//REA_EML_BC/duality" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stockflows" upperBound="-1"
+          eType="#//REA_EML_BC/stockflow" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participations" upperBound="-1"
+          eType="#//REA_EML_BC/participation" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="fulfillments" upperBound="-1"
+          eType="#//REA_EML_BC/fulfillment" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="specifications" upperBound="-1"
+          eType="#//REA_EML_BC/specification" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reciprocities" upperBound="-1"
+          eType="#//REA_EML_BC/recicprocity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicResource" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicEvent" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicAgent" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Commitment" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="specification" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="1"
+          eType="#//REA_EML_BC/Commitment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResouce" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicResource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="stockflow" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicResouce" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicResource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="fulfillment" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="1"
+          eType="#//REA_EML_BC/Commitment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="participation" abstract="true" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicAgent" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicAgent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
+          eType="#//REA_EML_BC/EconomicEvent"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="duality" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="2"
+          upperBound="2" eType="#//REA_EML_BC/EconomicEvent"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="recicprocity" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="2"
+          upperBound="2" eType="#//REA_EML_BC/Commitment"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="provides" eSuperTypes="#//REA_EML_BC/participation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="receives" eSuperTypes="#//REA_EML_BC/participation"/>
+  </eSubpackages>
+  <eSubpackages name="REA_EML_BE" nsURI="REA_EML_BE" nsPrefix="REA_EML_BE">
+    <eClassifiers xsi:type="ecore:EClass" name="REA_EML_BEM" eSuperTypes="#//Model">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntities" upperBound="-1"
+          eType="#//REA_EML_BE/BusinessEntity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessRelationships"
+          upperBound="-1" eType="#//REA_EML_BE/BusinessRelationship" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEvents" upperBound="-1"
+          eType="#//REA_EML_BP/BusinessEvent" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessEntity" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+          eType="#//REA_EML_BE/Attribute" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessRelationship" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          eType="#//REA_EML_BE/BusinessEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          eType="#//REA_EML_BE/BusinessEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PolicyEntity" eSuperTypes="#//REA_EML_BE/BusinessEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PolicyRelationship" eSuperTypes="#//REA_EML_BE/BusinessRelationship">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="policyRelationshipType"
+          eType="#//REA_EML_BE/PolicyRelationshipType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="policyEntity" lowerBound="1"
+          eType="#//REA_EML_BE/PolicyEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntity" lowerBound="1"
+          eType="#//REA_EML_BE/BusinessEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="PolicyRelationshipType">
+      <eLiterals name="Typification"/>
+      <eLiterals name="Grouping" value="1"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="REA_EML_BP" nsURI="REA_EML_BP" nsPrefix="REA_EML_BP">
+    <eClassifiers xsi:type="ecore:EClass" name="REA_EML_BPM" eSuperTypes="#//Model">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntities" upperBound="-1"
+          eType="#//REA_EML_BP/BusinessEntity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEvents" upperBound="-1"
+          eType="#//REA_EML_BP/BusinessEvent" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="involvements" upperBound="-1"
+          eType="#//REA_EML_BP/Involvement" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessProcess" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessEvent" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntities" upperBound="-1"
+          eType="#//REA_EML_BP/BusinessEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessEntity" eSuperTypes="#//ModelElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EconomicEvent" eSuperTypes="#//REA_EML_BP/BusinessEvent"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Commitment" eSuperTypes="#//REA_EML_BP/BusinessEvent"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Involvement" eSuperTypes="#//ModelElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEvent" lowerBound="1"
+          eType="#//REA_EML_BP/BusinessEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntity" lowerBound="1"
+          eType="#//REA_EML_BP/BusinessEntity"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

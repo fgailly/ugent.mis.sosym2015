@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [ 
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY REA-EMO "http://www.mis.ugent.be/ontologies/REA-EMO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sysfish "http://www.mis.ugent.be/ontologies/sysfish#" >
+]>
+
+<rdf:RDF xmlns="http://www.mis.ugent.be/ontologies/sysfish#"
+     xml:base="http://www.mis.ugent.be/ontologies/sysfish"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:REA-EMO="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sysfish="http://www.mis.ugent.be/ontologies/sysfish">
+    <owl:Ontology rdf:about="http://www.mis.ugent.be/ontologies/sysfish">
+        <owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+    </owl:Ontology>
+
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Fish">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;FishType">
+  	<rdf:type rdf:resource="&REA-EMO;PolicyEntity"/>
+ 	<REA-EMO:policyRelationship_BusinessEntity rdf:resource="&sysfish;Fish"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Employee">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+ 	<REA-EMO:businessRelationship_BusinessEntity rdf:resource="&sysfish;LaborType"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Money">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Labor">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Truck">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;Store">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+ 	<REA-EMO:businessRelationship_BusinessEntity rdf:resource="&sysfish;Employee"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;LeasingCompany">
+  	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
+ 	<REA-EMO:businessRelationship_BusinessEntity rdf:resource="&sysfish;Truck"/>
+  </owl:NamedIndividual>
+ 
+ 
+  <owl:NamedIndividual rdf:about="&sysfish;LaborType">
+  	<rdf:type rdf:resource="&REA-EMO;PolicyEntity"/>
+ 	<REA-EMO:policyRelationship_BusinessEntity rdf:resource="&sysfish;Labor"/>
+  </owl:NamedIndividual>
+ 
+ 
+ <owl:Axiom>
+         <rdfs:label xml:lang="en"></rdfs:label>
+         <owl:annotatedProperty rdf:resource="&REA-EMO;policyRelationship_BusinessEntity"/>
+         <owl:annotatedSource rdf:resource="&sysfish;LaborType"/>
+         <owl:annotatedTarget rdf:resource="&sysfish;Labor"/>
+ </owl:Axiom>
+ 
+ <owl:Axiom>
+         <rdfs:label xml:lang="en">worksAt</rdfs:label>
+         <owl:annotatedProperty rdf:resource="&REA-EMO;businessRelationship_BusinessEntity"/>
+         <owl:annotatedTarget rdf:resource="&sysfish;Employee"/>
+         <owl:annotatedSource rdf:resource="&sysfish;Store"/>
+ </owl:Axiom>
+ 
+ <owl:Axiom>
+         <rdfs:label xml:lang="en">specializes</rdfs:label>
+         <owl:annotatedProperty rdf:resource="&REA-EMO;businessRelationship_BusinessEntity"/>
+         <owl:annotatedTarget rdf:resource="&sysfish;Store"/>
+         <owl:annotatedSource rdf:resource="&sysfish;FishType"/>
+ </owl:Axiom>
+ 
+ <owl:Axiom>
+         <rdfs:label xml:lang="en">performs</rdfs:label>
+         <owl:annotatedProperty rdf:resource="&REA-EMO;businessRelationship_BusinessEntity"/>
+         <owl:annotatedTarget rdf:resource="&sysfish;LaborType"/>
+         <owl:annotatedSource rdf:resource="&sysfish;Employee"/>
+ </owl:Axiom>
+ 
+ <owl:Axiom>
+         <rdfs:label xml:lang="en">leasedFrom</rdfs:label>
+         <owl:annotatedProperty rdf:resource="&REA-EMO;businessRelationship_BusinessEntity"/>
+         <owl:annotatedTarget rdf:resource="&sysfish;Truck"/>
+         <owl:annotatedSource rdf:resource="&sysfish;LeasingCompany"/>
+ </owl:Axiom>
+ 
+</rdf:RDF>

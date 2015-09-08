@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_BE:REA_EML_BEM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_BE="REA_EML_BE" name="SyFishEntities" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish">
+  <businessEntities name="Fish"/>
+  <businessEntities xsi:type="REA_EML_BE:PolicyEntity" name="FishType"/>
+  <businessEntities name="Employee"/>
+  <businessEntities name="Money"/>
+  <businessEntities name="Labor"/>
+  <businessEntities name="Truck"/>
+  <businessEntities name="Store"/>
+  <businessEntities name="LeasingCompany"/>
+  <businessEntities xsi:type="REA_EML_BE:PolicyEntity" name="LaborType"/>
+  <businessRelationships xsi:type="REA_EML_BE:PolicyRelationship" name="" policyEntity="//@businessEntities.1" businessEntity="//@businessEntities.0"/>
+  <businessRelationships xsi:type="REA_EML_BE:PolicyRelationship" policyEntity="//@businessEntities.8" businessEntity="//@businessEntities.4"/>
+  <businessRelationships name="worksAt" target="//@businessEntities.2" source="//@businessEntities.6"/>
+  <businessRelationships name="specializes" target="//@businessEntities.6" source="//@businessEntities.1"/>
+  <businessRelationships name="performs" target="//@businessEntities.8" source="//@businessEntities.2"/>
+  <businessRelationships name="leasedFrom" target="//@businessEntities.5" source="//@businessEntities.7"/>
+</REA_EML_BE:REA_EML_BEM>

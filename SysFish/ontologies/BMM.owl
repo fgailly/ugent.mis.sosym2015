@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY bmm "http://www.ugent.mis.be/ontologies/BMM#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ugent.mis.be/ontologies/BMM#"
+     xml:base="http://www.ugent.mis.be/ontologies/BMM"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bmm="http://www.ugent.mis.be/ontologies/BMM#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.ugent.mis.be/ontologies/BMM"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentAffectsAchievementOfEnd -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentAffectsAchievementOfEnd">
+        <rdfs:domain rdf:resource="&bmm;Assesment"/>
+        <rdfs:range rdf:resource="&bmm;End"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentAffectsEmploymentOfMeans -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentAffectsEmploymentOfMeans">
+        <rdfs:domain rdf:resource="&bmm;Assesment"/>
+        <rdfs:range rdf:resource="&bmm;Means"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentCatgoeryCategorizesAssesment -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentCatgoeryCategorizesAssesment">
+        <rdfs:range rdf:resource="&bmm;Assesment"/>
+        <rdfs:domain rdf:resource="&bmm;AssessmentCategory"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentIdentifiesPotentialImpact -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentIdentifiesPotentialImpact">
+        <rdfs:domain rdf:resource="&bmm;Assesment"/>
+        <rdfs:range rdf:resource="&bmm;PotentialImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentIsJudgementOfInfluencer -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentIsJudgementOfInfluencer">
+        <rdfs:domain rdf:resource="&bmm;Assesment"/>
+        <rdfs:range rdf:resource="&bmm;Influencer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssesmentProvidesImpetusForDirective -->
+
+    <owl:ObjectProperty rdf:about="&bmm;AssesmentProvidesImpetusForDirective">
+        <rdfs:domain rdf:resource="&bmm;Assesment"/>
+        <rdfs:range rdf:resource="&bmm;Directive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessPolicyIsBasisOfBusinessRules -->
+
+    <owl:ObjectProperty rdf:about="&bmm;BusinessPolicyIsBasisOfBusinessRules">
+        <rdfs:domain rdf:resource="&bmm;BusinessPolicy"/>
+        <rdfs:range rdf:resource="&bmm;BusinessRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessProcessManagesAsset -->
+
+    <owl:ObjectProperty rdf:about="&bmm;BusinessProcessManagesAsset">
+        <rdfs:range rdf:resource="&bmm;Asset"/>
+        <rdfs:domain rdf:resource="&bmm;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessProcessRealizesCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="&bmm;BusinessProcessRealizesCourseOfAction">
+        <rdfs:domain rdf:resource="&bmm;BusinessProcess"/>
+        <rdfs:range rdf:resource="&bmm;CourseOfAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#CourseOfActionChannelsEffortsTowardsDesiredResult -->
+
+    <owl:ObjectProperty rdf:about="&bmm;CourseOfActionChannelsEffortsTowardsDesiredResult">
+        <rdfs:domain rdf:resource="&bmm;CourseOfAction"/>
+        <rdfs:range rdf:resource="&bmm;DesiredResult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#CourseOfActionFormulatedBasedOnDirective -->
+
+    <owl:ObjectProperty rdf:about="&bmm;CourseOfActionFormulatedBasedOnDirective">
+        <rdfs:domain rdf:resource="&bmm;CourseOfAction"/>
+        <rdfs:range rdf:resource="&bmm;Directive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#DirectiveActsAsRegulation -->
+
+    <owl:ObjectProperty rdf:about="&bmm;DirectiveActsAsRegulation">
+        <rdfs:domain rdf:resource="&bmm;Directive"/>
+        <rdfs:range rdf:resource="&bmm;Regulation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#DirectiveGovernsCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="&bmm;DirectiveGovernsCourseOfAction">
+        <rdfs:range rdf:resource="&bmm;CourseOfAction"/>
+        <rdfs:domain rdf:resource="&bmm;Directive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#DirectiveSupportsAchievementOfDesiredResult -->
+
+    <owl:ObjectProperty rdf:about="&bmm;DirectiveSupportsAchievementOfDesiredResult">
+        <rdfs:range rdf:resource="&bmm;DesiredResult"/>
+        <rdfs:domain rdf:resource="&bmm;Directive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#GoalAmplifiesVision -->
+
+    <owl:ObjectProperty rdf:about="&bmm;GoalAmplifiesVision">
+        <rdfs:domain rdf:resource="&bmm;Goal"/>
+        <rdfs:range rdf:resource="&bmm;Vision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#InfluencerCatagoryCategorizesInfluencer -->
+
+    <owl:ObjectProperty rdf:about="&bmm;InfluencerCatagoryCategorizesInfluencer">
+        <rdfs:range rdf:resource="&bmm;Influencer"/>
+        <rdfs:domain rdf:resource="&bmm;InfluencerCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisationIsSourceOfInfluencer -->
+
+    <owl:ObjectProperty rdf:about="&bmm;InfluencingOrganisationIsSourceOfInfluencer">
+        <rdfs:range rdf:resource="&bmm;Influencer"/>
+        <rdfs:domain rdf:resource="&bmm;InfluencingOrganisation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#MissionMakesOperativeVision -->
+
+    <owl:ObjectProperty rdf:about="&bmm;MissionMakesOperativeVision">
+        <rdfs:domain rdf:resource="&bmm;Mission"/>
+        <rdfs:range rdf:resource="&bmm;Vision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#ObjectiveQuantifiesGoal -->
+
+    <owl:ObjectProperty rdf:about="&bmm;ObjectiveQuantifiesGoal">
+        <rdfs:range rdf:resource="&bmm;Goal"/>
+        <rdfs:domain rdf:resource="&bmm;Objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#OrganisationCategoryCategorizesInfluencingOrganisation -->
+
+    <owl:ObjectProperty rdf:about="&bmm;OrganisationCategoryCategorizesInfluencingOrganisation">
+        <rdfs:range rdf:resource="&bmm;InfluencingOrganisation"/>
+        <rdfs:domain rdf:resource="&bmm;OrganisationCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#OrganisationUnitIsResponsibleForBusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&bmm;OrganisationUnitIsResponsibleForBusinessProcess">
+        <rdfs:range rdf:resource="&bmm;BusinessProcess"/>
+        <rdfs:domain rdf:resource="&bmm;OrganisationUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#PotentialImpactProvidesImpetusForDirective -->
+
+    <owl:ObjectProperty rdf:about="&bmm;PotentialImpactProvidesImpetusForDirective">
+        <rdfs:range rdf:resource="&bmm;Directive"/>
+        <rdfs:domain rdf:resource="&bmm;PotentialImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#StrategyIsAComponentOfThePlanForMission -->
+
+    <owl:ObjectProperty rdf:about="&bmm;StrategyIsAComponentOfThePlanForMission">
+        <rdfs:range rdf:resource="&bmm;Mission"/>
+        <rdfs:domain rdf:resource="&bmm;Strategy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#TacticEffectsEnforcementLevelOfBusinessRule -->
+
+    <owl:ObjectProperty rdf:about="&bmm;TacticEffectsEnforcementLevelOfBusinessRule">
+        <rdfs:range rdf:resource="&bmm;BusinessRule"/>
+        <rdfs:domain rdf:resource="&bmm;Tactic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#TacticImplementsStrategy -->
+
+    <owl:ObjectProperty rdf:about="&bmm;TacticImplementsStrategy">
+        <rdfs:range rdf:resource="&bmm;Strategy"/>
+        <rdfs:domain rdf:resource="&bmm;Tactic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Assesment -->
+
+    <owl:Class rdf:about="&bmm;Assesment"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#AssessmentCategory -->
+
+    <owl:Class rdf:about="&bmm;AssessmentCategory"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Asset -->
+
+    <owl:Class rdf:about="&bmm;Asset"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessPolicy -->
+
+    <owl:Class rdf:about="&bmm;BusinessPolicy">
+        <rdfs:subClassOf rdf:resource="&bmm;Directive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessProcess -->
+
+    <owl:Class rdf:about="&bmm;BusinessProcess"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#BusinessRule -->
+
+    <owl:Class rdf:about="&bmm;BusinessRule">
+        <rdfs:subClassOf rdf:resource="&bmm;Directive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#CourseOfAction -->
+
+    <owl:Class rdf:about="&bmm;CourseOfAction">
+        <rdfs:subClassOf rdf:resource="&bmm;Means"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#DesiredResult -->
+
+    <owl:Class rdf:about="&bmm;DesiredResult">
+        <rdfs:subClassOf rdf:resource="&bmm;End"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Directive -->
+
+    <owl:Class rdf:about="&bmm;Directive"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#End -->
+
+    <owl:Class rdf:about="&bmm;End"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#ExternalInfluencer -->
+
+    <owl:Class rdf:about="&bmm;ExternalInfluencer">
+        <rdfs:subClassOf rdf:resource="&bmm;Influencer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Goal -->
+
+    <owl:Class rdf:about="&bmm;Goal">
+        <rdfs:subClassOf rdf:resource="&bmm;DesiredResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Influencer -->
+
+    <owl:Class rdf:about="&bmm;Influencer"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#InfluencerCategory -->
+
+    <owl:Class rdf:about="&bmm;InfluencerCategory"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#InfluencingOrganisation -->
+
+    <owl:Class rdf:about="&bmm;InfluencingOrganisation"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#InternalInfluencer -->
+
+    <owl:Class rdf:about="&bmm;InternalInfluencer">
+        <rdfs:subClassOf rdf:resource="&bmm;Influencer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Means -->
+
+    <owl:Class rdf:about="&bmm;Means"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Mission -->
+
+    <owl:Class rdf:about="&bmm;Mission">
+        <rdfs:subClassOf rdf:resource="&bmm;Means"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Objective -->
+
+    <owl:Class rdf:about="&bmm;Objective">
+        <rdfs:subClassOf rdf:resource="&bmm;DesiredResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#OrganisationCategory -->
+
+    <owl:Class rdf:about="&bmm;OrganisationCategory"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#OrganisationUnit -->
+
+    <owl:Class rdf:about="&bmm;OrganisationUnit"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#PotentialImpact -->
+
+    <owl:Class rdf:about="&bmm;PotentialImpact"/>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#PotentialReward -->
+
+    <owl:Class rdf:about="&bmm;PotentialReward">
+        <rdfs:subClassOf rdf:resource="&bmm;PotentialImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Regulation -->
+
+    <owl:Class rdf:about="&bmm;Regulation">
+        <rdfs:subClassOf rdf:resource="&bmm;ExternalInfluencer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Risk -->
+
+    <owl:Class rdf:about="&bmm;Risk">
+        <rdfs:subClassOf rdf:resource="&bmm;PotentialImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Strategy -->
+
+    <owl:Class rdf:about="&bmm;Strategy">
+        <rdfs:subClassOf rdf:resource="&bmm;CourseOfAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Tactic -->
+
+    <owl:Class rdf:about="&bmm;Tactic">
+        <rdfs:subClassOf rdf:resource="&bmm;CourseOfAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ugent.mis.be/ontologies/BMM#Vision -->
+
+    <owl:Class rdf:about="&bmm;Vision">
+        <rdfs:subClassOf rdf:resource="&bmm;End"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

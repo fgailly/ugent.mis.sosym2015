@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module generateBusinessRelationship('REA_EML_BE')]
+[template public generateElement(aBusinessRelationship : BusinessRelationship, aREA_EML_BEM : REA_EML_BEM)]
+[if (aBusinessRelationship.name <>'' or aBusinessRelationship.name.size() <> 0) ]
+[if (aBusinessRelationship.oclIsTypeOf(PolicyRelationship)) ]
+<owl:Axiom>
+        <rdfs:label xml:lang="en">[aBusinessRelationship.name/]</rdfs:label>
+        <owl:annotatedProperty rdf:resource="&REA-EMO;policyRelationship_BusinessEntity"/>
+        <owl:annotatedSource rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.oclAsType(PolicyRelationship).policyEntity.name/]"/>
+        <owl:annotatedTarget rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.oclAsType(PolicyRelationship).businessEntity.name/]"/>
+</owl:Axiom>
+[/if]
+[if (aBusinessRelationship.oclIsTypeOf(BusinessRelationship)) ]
+<owl:Axiom>
+        <rdfs:label xml:lang="en">[aBusinessRelationship.name/]</rdfs:label>
+        <owl:annotatedProperty rdf:resource="&REA-EMO;businessRelationship_BusinessEntity"/>
+        <owl:annotatedTarget rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.target.name/]"/>
+        <owl:annotatedSource rdf:resource="&[aREA_EML_BEM.ontologyNS/];[aBusinessRelationship.source.name/]"/>
+</owl:Axiom>
+[/if]
+[/if]
+[/template]

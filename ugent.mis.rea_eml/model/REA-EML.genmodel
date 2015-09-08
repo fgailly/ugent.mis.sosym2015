@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ugent.mis.rea_eml/src" modelPluginID="ugent.mis.rea_eml"
+    modelName="REA-EML" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>REA-EML.ecore</foreignModel>
+  <genPackages prefix="REA_EML" disposableProviderFactory="true" ecorePackage="REA-EML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="REA-EML.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//Operator/equals"/>
+      <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//Operator/lessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//Operator/greaterThan"/>
+      <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//Operator/memberOf"/>
+    </genEnums>
+    <genClasses ecoreClass="REA-EML.ecore#//ModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//ModelElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="REA-EML.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//Model/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//Model/ontologyURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//Model/ontologyNS"/>
+    </genClasses>
+    <nestedGenPackages prefix="REA_EML_AR" basePackage="REA_EML" disposableProviderFactory="true"
+        ecorePackage="REA-EML.ecore#//REA_EML_AR">
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/IncrementEconomicEvent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/DecrementEconomicEvent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/duality">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/duality/decrementEconomicEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/duality/incrementEconomicEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/IncrementCommitment"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/DecrementCommitment"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/reciprocity">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/reciprocity/DecrementCommitment"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/reciprocity/IncrementCommitment"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/REA_EML_ARM">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/economicEvents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/economicResources"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/economicAgents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/dualities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/commitments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/reciprocities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/stockflows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/participations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/fulfillments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/specifications"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/organisationalUnit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//REA_EML_AR/REA_EML_ARM/businessProcess"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="REA-EML.ecore#//REA_EML_AR/EconomicEvent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/EconomicResource"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/EconomicAgent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/Commitment"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/specification">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/specification/commitment"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/specification/economicResouce"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/stockflow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/stockflow/economicEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/stockflow/economicResouce"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/fulfillment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/fulfillment/economicEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/fulfillment/commitment"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_AR/participation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/participation/economicAgent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_AR/participation/economicEvent"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="REA_EML_BC" basePackage="REA_EML" disposableProviderFactory="true"
+        ecorePackage="REA-EML.ecore#//REA_EML_BC">
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/REA_EML_BCM">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/economicResources"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/economicAgents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/economicEvents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/commitments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/dualities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/stockflows"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/participations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/fulfillments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/specifications"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/REA_EML_BCM/reciprocities"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/EconomicResource"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/EconomicEvent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/EconomicAgent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/Commitment"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/specification">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/specification/commitment"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/specification/economicResouce"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/stockflow">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/stockflow/economicEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/stockflow/economicResouce"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/fulfillment">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/fulfillment/economicEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/fulfillment/commitment"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="REA-EML.ecore#//REA_EML_BC/participation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/participation/economicAgent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/participation/economicEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/duality">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/duality/economicEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/recicprocity">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BC/recicprocity/commitment"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/provides"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BC/receives"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="REA_EML_BE" basePackage="REA_EML" disposableProviderFactory="true"
+        ecorePackage="REA-EML.ecore#//REA_EML_BE">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="REA-EML.ecore#//REA_EML_BE/PolicyRelationshipType">
+        <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//REA_EML_BE/PolicyRelationshipType/Typification"/>
+        <genEnumLiterals ecoreEnumLiteral="REA-EML.ecore#//REA_EML_BE/PolicyRelationshipType/Grouping"/>
+      </genEnums>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/REA_EML_BEM">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/REA_EML_BEM/businessEntities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/REA_EML_BEM/businessRelationships"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/REA_EML_BEM/businessEvents"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/BusinessEntity">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/BusinessEntity/attributes"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/BusinessRelationship">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/BusinessRelationship/target"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/BusinessRelationship/source"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/Attribute"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/PolicyEntity"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BE/PolicyRelationship">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//REA_EML_BE/PolicyRelationship/policyRelationshipType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/PolicyRelationship/policyEntity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BE/PolicyRelationship/businessEntity"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="REA_EML_BP" basePackage="REA_EML" disposableProviderFactory="true"
+        ecorePackage="REA-EML.ecore#//REA_EML_BP">
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/REA_EML_BPM">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/REA_EML_BPM/businessEntities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/REA_EML_BPM/businessEvents"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/REA_EML_BPM/involvements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REA-EML.ecore#//REA_EML_BP/REA_EML_BPM/businessProcess"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/BusinessEvent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/BusinessEvent/businessEntities"/>
+      </genClasses>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/BusinessEntity"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/EconomicEvent"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/Commitment"/>
+      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BP/Involvement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/Involvement/businessEvent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BP/Involvement/businessEntity"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

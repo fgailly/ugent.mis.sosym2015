@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generateEconomicEvent('REA_EML_BC')]
+
+
+[template public generateElement(anEconomicEvent : REA_EML_BC::EconomicEvent, aREA_EML_BCM : REA_EML_BCM)]
+
+<owl:NamedIndividual rdf:about="&[aREA_EML_BCM.ontologyNS/];[anEconomicEvent.name/]">
+	<rdf:type rdf:resource="&REA-EMO;EconomicEvent"/>
+[for (aDuality : REA_EML_BC::duality | aREA_EML_BCM.dualities)]
+	[if (aDuality.economicEvent->first() = anEconomicEvent)]
+	<REA-EMO:duality_EconomicEvent rdf:resource="&[aREA_EML_BCM.ontologyNS/];[aDuality.economicEvent->asOrderedSet()->at(1).name/]"/>
+	[/if]
+[/for]
+</owl:NamedIndividual>
+[/template]

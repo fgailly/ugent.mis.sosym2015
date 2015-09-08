@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_AR:REA_EML_ARM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_AR="REA_EML_AR" name="FishCleaningAR" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish" organisationalUnit="SysFish" businessProcess="FishCleaning">
+  <economicEvents xsi:type="REA_EML_AR:IncrementEconomicEvent" name="CleanOut"/>
+  <economicEvents xsi:type="REA_EML_AR:DecrementEconomicEvent" name="CleanIn"/>
+  <economicResources name="Fish"/>
+  <economicResources name="Labor"/>
+  <economicResources name="CleanedFish"/>
+  <economicAgents name="Cleaner"/>
+  <dualities decrementEconomicEvent="//@economicEvents.1" incrementEconomicEvent="//@economicEvents.0"/>
+  <stockflows economicEvent="//@economicEvents.1" economicResouce="//@economicResources.0"/>
+  <stockflows economicEvent="//@economicEvents.1" economicResouce="//@economicResources.1"/>
+  <stockflows name="" economicEvent="//@economicEvents.0" economicResouce="//@economicResources.2"/>
+  <participations name="" economicAgent="//@economicAgents.0" economicEvent="//@economicEvents.1"/>
+  <participations economicAgent="//@economicAgents.0" economicEvent="//@economicEvents.0"/>
+</REA_EML_AR:REA_EML_ARM>

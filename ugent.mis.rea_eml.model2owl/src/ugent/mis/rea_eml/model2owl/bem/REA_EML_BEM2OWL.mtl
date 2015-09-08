@@ -1,0 +1,41 @@
+[comment encoding = UTF-8 /]
+[module REA_EML_BEM2OWL('REA_EML', 'REA_EML_BE')/]
+[import ugent::mis::rea_eml::model2owl::bem::generateBusinessEntity /]
+[import ugent::mis::rea_eml::model2owl::bem::generateBusinessRelationship /]
+
+[template public REA_EML_BEM2OWL(aREA_EML_BEM : REA_EML_BEM)]
+	
+[comment @main /]
+[file (aREA_EML_BEM.name.concat('.owl'), false, 'UTF-8')]
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [ '[' /] 
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY REA-EMO "http://www.mis.ugent.be/ontologies/REA-EMO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY [aREA_EML_BEM.ontologyNS/] "[aREA_EML_BEM.ontologyURI/]#" >
+]>
+
+<rdf:RDF xmlns="[aREA_EML_BEM.ontologyURI/]#"
+     xml:base="[aREA_EML_BEM.ontologyURI/]"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:REA-EMO="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:[aREA_EML_BEM.ontologyNS/]="[aREA_EML_BEM.ontologyURI/]">
+    <owl:Ontology rdf:about="[aREA_EML_BEM.ontologyURI/]">
+        <owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+    </owl:Ontology>
+
+[for (aBusinessEntity : BusinessEntity | aREA_EML_BEM.businessEntities)]
+ [aBusinessEntity.generateElement(aREA_EML_BEM)/]
+[/for]
+[for (aBusinessRelationship : BusinessRelationship | aREA_EML_BEM.businessRelationships)]
+ [aBusinessRelationship.generateElement(aREA_EML_BEM)/]
+[/for]
+</rdf:RDF>
+[/file]
+[/template]

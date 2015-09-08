@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rea-emo "http://www.mis.ugent.be/ontologies/REA-EMO#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xml:base="http://www.mis.ugent.be/ontologies/REA-EMO"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rea-emo="http://www.mis.ugent.be/ontologies/REA-EMO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.mis.ugent.be/ontologies/REA-EMO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcessContainsBusinessEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;BusinessProcessContainsBusinessEvent">
+        <rdfs:range rdf:resource="&rea-emo;BusinessEvent"/>
+        <rdfs:domain rdf:resource="&rea-emo;BusinessProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#accountability_EconcomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;accountability_EconcomicAgent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;accountability_EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;particiaptionEconomicEvent_EconomicAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#accountability_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;accountability_EconomicEvent">
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participationEconomicEvent_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#businessRelationship_BusinessEntity -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;businessRelationship_BusinessEntity">
+        <rdfs:range rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&rea-emo;BusinessEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#duality_DecrementEconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;duality_DecrementEconomicEvent">
+        <rdfs:range rdf:resource="&rea-emo;DecrementEconomicEvent"/>
+        <rdfs:domain rdf:resource="&rea-emo;IncrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;duality_EconomicEvent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;duality_IncrementEconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#duality_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;duality_EconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#duality_IncrementEconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;duality_IncrementEconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;DecrementEconomicEvent"/>
+        <rdfs:range rdf:resource="&rea-emo;IncrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;duality_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_Commitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_Commitment">
+        <rdfs:range rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;fulfillment_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_DecrementCommitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_DecrementCommitment">
+        <rdfs:range rdf:resource="&rea-emo;DecrementCommitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;DecrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;fulfillment_Commitment"/>
+        <owl:inverseOf rdf:resource="&rea-emo;fulfillment_DecrementEconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_DecrementEconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_DecrementEconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;DecrementCommitment"/>
+        <rdfs:range rdf:resource="&rea-emo;DecrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;fulfillment_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_EconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_IncrementCommitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_IncrementCommitment">
+        <rdfs:range rdf:resource="&rea-emo;IncrementCommitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;IncrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;fulfillment_Commitment"/>
+        <owl:inverseOf rdf:resource="&rea-emo;fulfillment_IncrementEconomocEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#fulfillment_IncrementEconomocEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;fulfillment_IncrementEconomocEvent">
+        <rdfs:domain rdf:resource="&rea-emo;IncrementCommitment"/>
+        <rdfs:range rdf:resource="&rea-emo;IncrementEconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;fulfillment_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#grouping_BusinessEntity -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;grouping_BusinessEntity">
+        <rdfs:range rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&rea-emo;PolicyEntityGroup"/>
+        <owl:inverseOf rdf:resource="&rea-emo;grouping_PolicyEntityGroup"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;policyRelationship_BusinessEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#grouping_PolicyEntityGroup -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;grouping_PolicyEntityGroup">
+        <rdfs:domain rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:range rdf:resource="&rea-emo;PolicyEntityGroup"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;policyRelationship_BusinessPolicyEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#particiaptionEconomicEvent_EconomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;particiaptionEconomicEvent_EconomicAgent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participation_EconomicAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#participation -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;participation">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicAgent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;participation_EconomicAgent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rea-emo;Commitment"/>
+                    <rdf:Description rdf:about="&rea-emo;EconomicEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#participationCommitment_Commitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;participationCommitment_Commitment">
+        <rdfs:range rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#participationCommitment_EconomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;participationCommitment_EconomicAgent">
+        <rdfs:domain rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participation_EconomicAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#participationEconomicEvent_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;participationEconomicEvent_EconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;particiaptionEconomicEvent_EconomicAgent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#participation_EconomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;participation_EconomicAgent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rea-emo;Commitment"/>
+                    <rdf:Description rdf:about="&rea-emo;EconomicAgent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessEntity -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;policyRelationship_BusinessEntity">
+        <rdfs:range rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&rea-emo;PolicyEntity"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;businessRelationship_BusinessEntity"/>
+        <owl:inverseOf rdf:resource="&rea-emo;policyRelationship_BusinessPolicyEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#policyRelationship_BusinessPolicyEntity -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;policyRelationship_BusinessPolicyEntity">
+        <rdfs:domain rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:range rdf:resource="&rea-emo;PolicyEntity"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;businessRelationship_BusinessEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#provide_EconomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;provide_EconomicAgent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;particiaptionEconomicEvent_EconomicAgent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;provide_EconomicEvent"/>
+        <owl:propertyDisjointWith rdf:resource="&rea-emo;receive_EconomicAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#provide_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;provide_EconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participationEconomicEvent_EconomicEvent"/>
+        <owl:propertyDisjointWith rdf:resource="&rea-emo;receive_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#receive_EconomicAgent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;receive_EconomicAgent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;particiaptionEconomicEvent_EconomicAgent"/>
+        <owl:inverseOf rdf:resource="&rea-emo;receive_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#receive_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;receive_EconomicEvent">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicAgent"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;participationEconomicEvent_EconomicEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_Commitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;reciprocity_Commitment">
+        <rdfs:range rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;Commitment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_DecrementCommitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;reciprocity_DecrementCommitment">
+        <rdfs:range rdf:resource="&rea-emo;DecrementCommitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;IncrementCommitment"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;reciprocity_Commitment"/>
+        <owl:inverseOf rdf:resource="&rea-emo;reciprocity_IncrementCommitment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#reciprocity_IncrementCommitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;reciprocity_IncrementCommitment">
+        <rdfs:domain rdf:resource="&rea-emo;DecrementCommitment"/>
+        <rdfs:range rdf:resource="&rea-emo;IncrementCommitment"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;reciprocity_Commitment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#specification_Commitment -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;specification_Commitment">
+        <rdfs:range rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicResource"/>
+        <owl:inverseOf rdf:resource="&rea-emo;specification_EconomicResource"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#specification_EconomicResource -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;specification_EconomicResource">
+        <rdfs:domain rdf:resource="&rea-emo;Commitment"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicResource"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#stockflow_EconomicEvent -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;stockflow_EconomicEvent">
+        <rdfs:range rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:domain rdf:resource="&rea-emo;EconomicResource"/>
+        <owl:inverseOf rdf:resource="&rea-emo;stockflow_EconomicResource"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#stockflow_EconomicResource -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;stockflow_EconomicResource">
+        <rdfs:domain rdf:resource="&rea-emo;EconomicEvent"/>
+        <rdfs:range rdf:resource="&rea-emo;EconomicResource"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#typification_BusinessEntity -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;typification_BusinessEntity">
+        <rdfs:range rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&rea-emo;PolicyEntityType"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;policyRelationship_BusinessEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#typification_PolicyEntityType -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;typification_PolicyEntityType">
+        <rdfs:domain rdf:resource="&rea-emo;BusinessEntity"/>
+        <rdfs:range rdf:resource="&rea-emo;PolicyEntityType"/>
+        <rdfs:subPropertyOf rdf:resource="&rea-emo;policyRelationship_BusinessPolicyEntity"/>
+        <owl:inverseOf rdf:resource="&rea-emo;typification_BusinessEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#view_OrganisationalUnit -->
+
+    <owl:ObjectProperty rdf:about="&rea-emo;view_OrganisationalUnit">
+        <rdfs:range rdf:resource="&rea-emo;OrganisationalUnit"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rea-emo;DecrementCommitment"/>
+                    <rdf:Description rdf:about="&rea-emo;DecrementEconomicEvent"/>
+                    <rdf:Description rdf:about="&rea-emo;IncrementCommitment"/>
+                    <rdf:Description rdf:about="&rea-emo;IncrementEconomicEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEntity -->
+
+    <owl:Class rdf:about="&rea-emo;BusinessEntity"/>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#BusinessEvent -->
+
+    <owl:Class rdf:about="&rea-emo;BusinessEvent"/>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#BusinessProcess -->
+
+    <owl:Class rdf:about="&rea-emo;BusinessProcess"/>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#Commitment -->
+
+    <owl:Class rdf:about="&rea-emo;Commitment"/>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#DecrementCommitment -->
+
+    <owl:Class rdf:about="&rea-emo;DecrementCommitment">
+        <rdfs:subClassOf rdf:resource="&rea-emo;Commitment"/>
+        <owl:disjointWith rdf:resource="&rea-emo;IncrementCommitment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#DecrementEconomicEvent -->
+
+    <owl:Class rdf:about="&rea-emo;DecrementEconomicEvent">
+        <rdfs:subClassOf rdf:resource="&rea-emo;EconomicEvent"/>
+        <owl:disjointWith rdf:resource="&rea-emo;IncrementEconomicEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#EconomicAgent -->
+
+    <owl:Class rdf:about="&rea-emo;EconomicAgent">
+        <rdfs:subClassOf rdf:resource="&rea-emo;BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#EconomicEvent -->
+
+    <owl:Class rdf:about="&rea-emo;EconomicEvent"/>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#EconomicResource -->
+
+    <owl:Class rdf:about="&rea-emo;EconomicResource">
+        <rdfs:subClassOf rdf:resource="&rea-emo;BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#IncrementCommitment -->
+
+    <owl:Class rdf:about="&rea-emo;IncrementCommitment">
+        <rdfs:subClassOf rdf:resource="&rea-emo;Commitment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#IncrementEconomicEvent -->
+
+    <owl:Class rdf:about="&rea-emo;IncrementEconomicEvent">
+        <rdfs:subClassOf rdf:resource="&rea-emo;EconomicEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#OrganisationalUnit -->
+
+    <owl:Class rdf:about="&rea-emo;OrganisationalUnit">
+        <rdfs:subClassOf rdf:resource="&rea-emo;BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntity -->
+
+    <owl:Class rdf:about="&rea-emo;PolicyEntity">
+        <rdfs:subClassOf rdf:resource="&rea-emo;BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityGroup -->
+
+    <owl:Class rdf:about="&rea-emo;PolicyEntityGroup">
+        <rdfs:subClassOf rdf:resource="&rea-emo;PolicyEntity"/>
+        <owl:disjointWith rdf:resource="&rea-emo;PolicyEntityType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#PolicyEntityType -->
+
+    <owl:Class rdf:about="&rea-emo;PolicyEntityType">
+        <rdfs:subClassOf rdf:resource="&rea-emo;PolicyEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#Transfer -->
+
+    <owl:Class rdf:about="&rea-emo;Transfer">
+        <rdfs:subClassOf rdf:resource="&rea-emo;EconomicEvent"/>
+        <owl:disjointWith rdf:resource="&rea-emo;Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mis.ugent.be/ontologies/REA-EMO#Transformation -->
+
+    <owl:Class rdf:about="&rea-emo;Transformation">
+        <rdfs:subClassOf rdf:resource="&rea-emo;EconomicEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&rea-emo;BusinessEntity"/>
+            <rdf:Description rdf:about="&rea-emo;BusinessEvent"/>
+            <rdf:Description rdf:about="&rea-emo;BusinessProcess"/>
+            <rdf:Description rdf:about="&rea-emo;Commitment"/>
+            <rdf:Description rdf:about="&rea-emo;EconomicEvent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&rea-emo;EconomicAgent"/>
+            <rdf:Description rdf:about="&rea-emo;EconomicResource"/>
+            <rdf:Description rdf:about="&rea-emo;OrganisationalUnit"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

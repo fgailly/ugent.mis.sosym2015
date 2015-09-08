@@ -1,0 +1,70 @@
+/**
+ */
+package BMM.tests;
+
+import BMM.BMMFactory;
+import BMM.Liability;
+
+import junit.textui.TestRunner;
+
+/**
+ * <!-- begin-user-doc -->
+ * A test case for the model object '<em><b>Liability</b></em>'.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class LiabilityTest extends MotivationElementTest {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(LiabilityTest.class);
+	}
+
+	/**
+	 * Constructs a new Liability test case with the given name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiabilityTest(String name) {
+		super(name);
+	}
+
+	/**
+	 * Returns the fixture for this Liability test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected Liability getFixture() {
+		return (Liability)fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(BMMFactory.eINSTANCE.createLiability());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
+	}
+
+} //LiabilityTest

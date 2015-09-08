@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_HQNnMJJTEeOfLMVDZbxQ3Q" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_HQU78JJTEeOfLMVDZbxQ3Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_HQVjApJTEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_HQWKEJJTEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HQWKEZJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HQWKEpJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HQWKE5JTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HQWKFJJTEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HQWKFZJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HQWKFpJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HQWKF5JTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_HQVjAJJTEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEvents/REA_BusinessEvents_Model"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HQVjAZJTEeOfLMVDZbxQ3Q" x="378" y="45"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_HQWKGJJTEeOfLMVDZbxQ3Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_HQWxIJJTEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_HQWxIZJTEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HQWxIpJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HQWxI5JTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HQWxJJJTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HQWxJZJTEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HQWxJpJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HQWxJ5JTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HQWxKJJTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_HQWKGZJTEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEvents/BusinessEvent"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HQWKGpJTEeOfLMVDZbxQ3Q" x="378" y="351"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_YMilcJJTEeOfLMVDZbxQ3Q" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YNdLcJJTEeOfLMVDZbxQ3Q" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YNdLcZJTEeOfLMVDZbxQ3Q" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_YMjMgJJTEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_YMjzkJJTEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YMjzkZJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YMjzkpJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YMjzk5JTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YMkaoJJTEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YMkaoZJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YMkaopJTEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YMkao5JTEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_YMilcZJTEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEntities/BusinessEntity"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YMilcpJTEeOfLMVDZbxQ3Q" x="180" y="144"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_QM0gYJJUEeOfLMVDZbxQ3Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_QM1HcJJUEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_QM1ugJJUEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_QM1ugZJUEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QM1ugpJUEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QM1ug5JUEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_QM1uhJJUEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_QM1uhZJUEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QM1uhpJUEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QM1uh5JUEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_QM0gYZJUEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEvents/BusinessEntityState"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QM0gYpJUEeOfLMVDZbxQ3Q" x="216" y="252"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SVnQQJMBEeOfLMVDZbxQ3Q" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SVy2cJMBEeOfLMVDZbxQ3Q" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SVy2cZMBEeOfLMVDZbxQ3Q" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_SVn3UZMBEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SVoeYJMBEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SVoeYZMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SVoeYpMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SVoeY5MBEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SVoeZJMBEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SVoeZZMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SVoeZpMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SVoeZ5MBEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SVnQQZMBEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEntities/BusinessRelationship"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SVn3UJMBEeOfLMVDZbxQ3Q" x="486" y="144"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_l11uoJMBEeOfLMVDZbxQ3Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_l12VsJMBEeOfLMVDZbxQ3Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_l12VsZMBEeOfLMVDZbxQ3Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_l12VspMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l12Vs5MBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l12VtJMBEeOfLMVDZbxQ3Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_l12VtZMBEeOfLMVDZbxQ3Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_l12VtpMBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l12Vt5MBEeOfLMVDZbxQ3Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l12VuJMBEeOfLMVDZbxQ3Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_l11uoZMBEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="REA-EML.ecore#//REA_EML_BusinessEvents/BusinessRelationshipState"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l11uopMBEeOfLMVDZbxQ3Q" x="468" y="252"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_HQNnMZJTEeOfLMVDZbxQ3Q"/>
+  <element xmi:type="ecore:EPackage" href="REA-EML.ecore#//REA_EML_BusinessEvents"/>
+  <edges xmi:type="notation:Edge" xmi:id="_YNBtoJJTEeOfLMVDZbxQ3Q" type="3002" source="_HQU78JJTEeOfLMVDZbxQ3Q" target="_YMilcJJTEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_YNF_EJJTEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YNF_EZJTEeOfLMVDZbxQ3Q" x="20" y="51"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YNHNMJJTEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YNHNMZJTEeOfLMVDZbxQ3Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_YNBtoZJTEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YNBtopJTEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEvents/REA_BusinessEvents_Model/businessEntities"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YNBto5JTEeOfLMVDZbxQ3Q" points="[66, 20, -297, -90]$[303, 91, -60, -19]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G_cK0JJUEeOfLMVDZbxQ3Q" id="(0.8509316770186336,0.4426229508196721)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_j-oeAJJUEeOfLMVDZbxQ3Q" type="3002" source="_YMilcJJTEeOfLMVDZbxQ3Q" target="_QM0gYJJUEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_j-oeBJJUEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_j-oeBZJUEeOfLMVDZbxQ3Q" x="-10" y="51"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_j-oeBpJUEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_j-oeB5JUEeOfLMVDZbxQ3Q" x="1" y="16"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_j-oeAZJUEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_j-oeApJUEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEntities/BusinessEntity/businessEntityStates"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_j-oeA5JUEeOfLMVDZbxQ3Q" points="[16, 15, -112, -81]$[72, 103, -56, 7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j-qTMJJUEeOfLMVDZbxQ3Q" id="(0.7018633540372671,0.7540983606557377)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_sCsbEJJUEeOfLMVDZbxQ3Q" type="3002" source="_HQWKGJJTEeOfLMVDZbxQ3Q" target="_QM0gYJJUEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_sCtCIJJUEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sCtCIZJUEeOfLMVDZbxQ3Q" x="22" y="-46"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_sCtCIpJUEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sCtCI5JUEeOfLMVDZbxQ3Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_sCsbEZJUEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_sCsbEpJUEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEvents/BusinessEvent/businessEntityStates"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sCsbE5JUEeOfLMVDZbxQ3Q" points="[-50, 14, 253, -71]$[-301, 70, 2, -15]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sCu3UJJUEeOfLMVDZbxQ3Q" id="(0.8434782608695652,0.38095238095238093)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_V2RTkJMBEeOfLMVDZbxQ3Q" type="3002" source="_HQU78JJTEeOfLMVDZbxQ3Q" target="_SVnQQJMBEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_V2RTlJMBEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_V2RTlZMBEeOfLMVDZbxQ3Q" x="34" y="-52"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_V2R6oJMBEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_V2R6oZMBEeOfLMVDZbxQ3Q" x="-12" y="17"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_V2RTkZMBEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_V2RTkpMBEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEvents/REA_BusinessEvents_Model/businessRelationships"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V2RTk5MBEeOfLMVDZbxQ3Q" points="[10, 20, 1, -63]$[10, 79, 1, -4]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V2Tv0JMBEeOfLMVDZbxQ3Q" id="(0.4720496894409938,0.09259259259259259)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_osWowJMBEeOfLMVDZbxQ3Q" type="3002" source="_SVnQQJMBEeOfLMVDZbxQ3Q" target="_l11uoJMBEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_osXP0JMBEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_osXP0ZMBEeOfLMVDZbxQ3Q" x="-26" y="-90"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_osXP0pMBEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_osXP05MBEeOfLMVDZbxQ3Q" x="2" y="23"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_osWowZMBEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_osWowpMBEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEntities/BusinessRelationship/businessRelationshipStates"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_osWow5MBEeOfLMVDZbxQ3Q" points="[5, 26, -15, -76]$[-52, 96, -72, -6]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_t-qlAJMDEeOfLMVDZbxQ3Q" type="3002" source="_HQWKGJJTEeOfLMVDZbxQ3Q" target="_l11uoJMBEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_t-rMEJMDEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_t-rMEZMDEeOfLMVDZbxQ3Q" x="67" y="74"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_t-rMEpMDEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_t-rME5MDEeOfLMVDZbxQ3Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_t-qlAZMDEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_t-qlApMDEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEvents/BusinessEvent/businessRelationshipStates"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_t-qlA5MDEeOfLMVDZbxQ3Q" points="[23, -20, -76, 68]$[100, -79, 1, 9]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t-tBQJMDEeOfLMVDZbxQ3Q" id="(0.40816326530612246,0.7857142857142857)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_zdI_4JMDEeOfLMVDZbxQ3Q" type="3002" source="_HQU78JJTEeOfLMVDZbxQ3Q" target="_HQWKGJJTEeOfLMVDZbxQ3Q">
+    <children xmi:type="notation:Node" xmi:id="_zdJm8JMDEeOfLMVDZbxQ3Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdJm8ZMDEeOfLMVDZbxQ3Q" x="46" y="-12"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zdJm8pMDEeOfLMVDZbxQ3Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdJm85MDEeOfLMVDZbxQ3Q" x="74" y="6"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_zdI_4ZMDEeOfLMVDZbxQ3Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdI_4pMDEeOfLMVDZbxQ3Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="REA-EML.ecore#//REA_EML_BusinessEvents/REA_BusinessEvents_Model/businessEvents.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdI_45MDEeOfLMVDZbxQ3Q" points="[19, 8, 72, -291]$[210, 8, 263, -291]$[210, 299, 263, 0]$[-32, 299, 21, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zdLcIJMDEeOfLMVDZbxQ3Q" id="(0.8758169934640523,0.47619047619047616)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zdLcIZMDEeOfLMVDZbxQ3Q" id="(0.7941176470588235,0.30952380952380953)"/>
+  </edges>
+</notation:Diagram>

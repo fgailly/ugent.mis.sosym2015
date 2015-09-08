@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="REA_EML_C"
+            class="REA_EML.REA_EML_Collaboration.REA_EML_CollaborationPackage"
+            genModel="model/rea_eml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="REA_EML_E"
+            class="REA_EML.REA_EML_Enterprise.REA_EML_EnterprisePackage"
+            genModel="model/rea_eml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML-editor -->
+      <package
+            uri="REA_EML"
+            class="REA_EML.REA_EMLPackage"
+            genModel="model/REA-EML-editor.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML -->
+      <package
+            uri="REA_EML_AR"
+            class="REA_EML.REA_EML_AR.REA_EML_ARPackage"
+            genModel="model/REA-EML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML -->
+      <package
+            uri="REA_EML_BC"
+            class="REA_EML.REA_EML_BC.REA_EML_BCPackage"
+            genModel="model/REA-EML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML -->
+      <package
+            uri="REA_EML_BE"
+            class="REA_EML.REA_EML_BE.REA_EML_BEPackage"
+            genModel="model/REA-EML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML -->
+      <package
+            uri="REA_EML_BP"
+            class="REA_EML.REA_EML_BP.REA_EML_BPPackage"
+            genModel="model/REA-EML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML-editor -->
+      <package
+            uri="REA_EML_BUSINESSPROCESS"
+            class="REA_EML.REA_EML_BUSINESSPROCESS.REA_EML_BUSINESSPROCESSPackage"
+            genModel="model/REA-EML-editor.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML-editor -->
+      <package
+            uri="REA_EML_BUSINESSRULE"
+            class="REA_EML.REA_EML_BUSINESSRULE.REA_EML_BUSINESSRULEPackage"
+            genModel="model/REA-EML-editor.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML-editor -->
+      <package
+            uri="REA_EML_COLLABORATION"
+            class="REA_EML.REA_EML_COLLABORATION.REA_EML_COLLABORATIONPackage"
+            genModel="model/REA-EML-editor.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated REA-EML-editor -->
+      <package
+            uri="REA_EML_BusinessEntities"
+            class="REA_EML.REA_EML_BusinessEntities.REA_EML_BusinessEntitiesPackage"
+            genModel="model/REA-EML-editor.genmodel"/>
+   </extension>
+
+</plugin>

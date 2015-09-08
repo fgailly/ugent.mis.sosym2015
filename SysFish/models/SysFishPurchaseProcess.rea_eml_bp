@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_BP:REA_EML_BPM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_BP="REA_EML_BP" name="FishPurchaseBP" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish" businessProcess="FishPurchase">
+  <businessEntities name="Fish"/>
+  <businessEntities name="Fisherman"/>
+  <businessEntities name="Truck"/>
+  <businessEntities name="Cleaner"/>
+  <businessEvents name="IdentifyFishNeeds"/>
+  <businessEvents name="IdentifyFishers"/>
+  <businessEvents name="DriveTruckToDock" businessEntities="//@businessEntities.2"/>
+  <businessEvents name="Barter"/>
+  <businessEvents name="PreperarePurchaseOrder"/>
+  <businessEvents xsi:type="REA_EML_BP:EconomicEvent" name="FishPurchase" businessEntities="//@businessEntities.0"/>
+  <businessEvents name="LoadFish" businessEntities="//@businessEntities.0"/>
+  <businessEvents name="DriveTruckToStore" businessEntities="//@businessEntities.2"/>
+  <businessEvents name="NotifyCleaners" businessEntities="//@businessEntities.3"/>
+  <businessEvents name="UnloadTruck"/>
+  <involvements businessEvent="//@businessEvents.0" businessEntity="//@businessEntities.0"/>
+  <involvements businessEvent="//@businessEvents.1" businessEntity="//@businessEntities.1"/>
+  <involvements businessEvent="//@businessEvents.2" businessEntity="//@businessEntities.2"/>
+  <involvements businessEvent="//@businessEvents.5" businessEntity="//@businessEntities.0"/>
+  <involvements businessEvent="//@businessEvents.6" businessEntity="//@businessEntities.0"/>
+  <involvements businessEvent="//@businessEvents.7" businessEntity="//@businessEntities.2"/>
+  <involvements businessEvent="//@businessEvents.8" businessEntity="//@businessEntities.3"/>
+  <involvements businessEvent="//@businessEvents.3" businessEntity="//@businessEntities.1"/>
+  <involvements businessEvent="//@businessEvents.6" businessEntity="//@businessEntities.0"/>
+  <involvements businessEvent="//@businessEvents.5" businessEntity="//@businessEntities.1"/>
+  <involvements businessEvent="//@businessEvents.9" businessEntity="//@businessEntities.2"/>
+</REA_EML_BP:REA_EML_BPM>
