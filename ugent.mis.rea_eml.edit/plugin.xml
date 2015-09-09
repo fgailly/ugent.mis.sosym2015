@@ -22,8 +22,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_AR"
-            class="REA_EML.REA_EML_AR.provider.REA_EML_ARItemProviderAdapterFactory"
+            uri="REA_EML_BPM"
+            class="REA_EML.REA_EML_BPM.provider.REA_EML_BPMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -35,8 +35,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_BC"
-            class="REA_EML.REA_EML_BC.provider.REA_EML_BCItemProviderAdapterFactory"
+            uri="REA_EML_BCM"
+            class="REA_EML.REA_EML_BCM.provider.REA_EML_BCMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -48,21 +48,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_BE"
-            class="REA_EML.REA_EML_BE.provider.REA_EML_BEItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated REA-EML -->
-      <factory
-            uri="REA_EML_BP"
-            class="REA_EML.REA_EML_BP.provider.REA_EML_BPItemProviderAdapterFactory"
+            uri="REA_EML_BPolM"
+            class="REA_EML.REA_EML_BPolM.provider.REA_EML_BPolMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -40,12 +40,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="REA_EML.REA_EML_AR.presentation.REA_EML_ARModelWizardID"
-            name="%_UI_REA_EML_ARModelWizard_label"
-            class="REA_EML.REA_EML_AR.presentation.REA_EML_ARModelWizard"
+            id="REA_EML.REA_EML_BPM.presentation.REA_EML_BPMModelWizardID"
+            name="%_UI_REA_EML_BPMModelWizard_label"
+            class="REA_EML.REA_EML_BPM.presentation.REA_EML_BPMModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/REA_EML_ARModelFile.gif">
-         <description>%_UI_REA_EML_ARModelWizard_description</description>
+            icon="icons/full/obj16/REA_EML_BPMModelFile.gif">
+         <description>%_UI_REA_EML_BPMModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -53,12 +53,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated REA-EML -->
       <editor
-            id="REA_EML.REA_EML_AR.presentation.REA_EML_AREditorID"
-            name="%_UI_REA_EML_AREditor_label"
-            icon="icons/full/obj16/REA_EML_ARModelFile.gif"
-            extensions="rea_eml_ar"
-            class="REA_EML.REA_EML_AR.presentation.REA_EML_AREditor"
-            contributorClass="REA_EML.REA_EML_AR.presentation.REA_EML_ARActionBarContributor">
+            id="REA_EML.REA_EML_BPM.presentation.REA_EML_BPMEditorID"
+            name="%_UI_REA_EML_BPMEditor_label"
+            icon="icons/full/obj16/REA_EML_BPMModelFile.gif"
+            extensions="rea_eml_bpm"
+            class="REA_EML.REA_EML_BPM.presentation.REA_EML_BPMEditor"
+            contributorClass="REA_EML.REA_EML_BPM.presentation.REA_EML_BPMActionBarContributor">
       </editor>
    </extension>
 
@@ -68,12 +68,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="REA_EML.REA_EML_BC.presentation.REA_EML_BCModelWizardID"
-            name="%_UI_REA_EML_BCModelWizard_label"
-            class="REA_EML.REA_EML_BC.presentation.REA_EML_BCModelWizard"
+            id="REA_EML.REA_EML_BCM.presentation.REA_EML_BCMModelWizardID"
+            name="%_UI_REA_EML_BCMModelWizard_label"
+            class="REA_EML.REA_EML_BCM.presentation.REA_EML_BCMModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/REA_EML_BCModelFile.gif">
-         <description>%_UI_REA_EML_BCModelWizard_description</description>
+            icon="icons/full/obj16/REA_EML_BCMModelFile.gif">
+         <description>%_UI_REA_EML_BCMModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -81,12 +81,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated REA-EML -->
       <editor
-            id="REA_EML.REA_EML_BC.presentation.REA_EML_BCEditorID"
-            name="%_UI_REA_EML_BCEditor_label"
-            icon="icons/full/obj16/REA_EML_BCModelFile.gif"
-            extensions="rea_eml_bc"
-            class="REA_EML.REA_EML_BC.presentation.REA_EML_BCEditor"
-            contributorClass="REA_EML.REA_EML_BC.presentation.REA_EML_BCActionBarContributor">
+            id="REA_EML.REA_EML_BCM.presentation.REA_EML_BCMEditorID"
+            name="%_UI_REA_EML_BCMEditor_label"
+            icon="icons/full/obj16/REA_EML_BCMModelFile.gif"
+            extensions="rea_eml_bcm"
+            class="REA_EML.REA_EML_BCM.presentation.REA_EML_BCMEditor"
+            contributorClass="REA_EML.REA_EML_BCM.presentation.REA_EML_BCMActionBarContributor">
       </editor>
    </extension>
 
@@ -96,12 +96,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="REA_EML.REA_EML_BE.presentation.REA_EML_BEModelWizardID"
-            name="%_UI_REA_EML_BEModelWizard_label"
-            class="REA_EML.REA_EML_BE.presentation.REA_EML_BEModelWizard"
+            id="REA_EML.REA_EML_BPolM.presentation.REA_EML_BPolMModelWizardID"
+            name="%_UI_REA_EML_BPolMModelWizard_label"
+            class="REA_EML.REA_EML_BPolM.presentation.REA_EML_BPolMModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/REA_EML_BEModelFile.gif">
-         <description>%_UI_REA_EML_BEModelWizard_description</description>
+            icon="icons/full/obj16/REA_EML_BPolMModelFile.gif">
+         <description>%_UI_REA_EML_BPolMModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -109,40 +109,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated REA-EML -->
       <editor
-            id="REA_EML.REA_EML_BE.presentation.REA_EML_BEEditorID"
-            name="%_UI_REA_EML_BEEditor_label"
-            icon="icons/full/obj16/REA_EML_BEModelFile.gif"
-            extensions="rea_eml_be"
-            class="REA_EML.REA_EML_BE.presentation.REA_EML_BEEditor"
-            contributorClass="REA_EML.REA_EML_BE.presentation.REA_EML_BEActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated REA-EML -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="REA_EML.REA_EML_BP.presentation.REA_EML_BPModelWizardID"
-            name="%_UI_REA_EML_BPModelWizard_label"
-            class="REA_EML.REA_EML_BP.presentation.REA_EML_BPModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/REA_EML_BPModelFile.gif">
-         <description>%_UI_REA_EML_BPModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated REA-EML -->
-      <editor
-            id="REA_EML.REA_EML_BP.presentation.REA_EML_BPEditorID"
-            name="%_UI_REA_EML_BPEditor_label"
-            icon="icons/full/obj16/REA_EML_BPModelFile.gif"
-            extensions="rea_eml_bp"
-            class="REA_EML.REA_EML_BP.presentation.REA_EML_BPEditor"
-            contributorClass="REA_EML.REA_EML_BP.presentation.REA_EML_BPActionBarContributor">
+            id="REA_EML.REA_EML_BPolM.presentation.REA_EML_BPolMEditorID"
+            name="%_UI_REA_EML_BPolMEditor_label"
+            icon="icons/full/obj16/REA_EML_BPolMModelFile.gif"
+            extensions="rea_eml_bpolm"
+            class="REA_EML.REA_EML_BPolM.presentation.REA_EML_BPolMEditor"
+            contributorClass="REA_EML.REA_EML_BPolM.presentation.REA_EML_BPolMActionBarContributor">
       </editor>
    </extension>
 

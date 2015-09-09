@@ -7,28 +7,16 @@ import REA_EML.ModelElement;
 import REA_EML.Operator;
 import REA_EML.REA_EMLFactory;
 import REA_EML.REA_EMLPackage;
-
-import REA_EML.REA_EML_AR.REA_EML_ARPackage;
-
-import REA_EML.REA_EML_AR.impl.REA_EML_ARPackageImpl;
-
-import REA_EML.REA_EML_BC.REA_EML_BCPackage;
-
-import REA_EML.REA_EML_BC.impl.REA_EML_BCPackageImpl;
-
-import REA_EML.REA_EML_BE.REA_EML_BEPackage;
-
-import REA_EML.REA_EML_BE.impl.REA_EML_BEPackageImpl;
-
-import REA_EML.REA_EML_BP.REA_EML_BPPackage;
-
-import REA_EML.REA_EML_BP.impl.REA_EML_BPPackageImpl;
-
+import REA_EML.REA_EML_BCM.REA_EML_BCMPackage;
+import REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl;
+import REA_EML.REA_EML_BPM.REA_EML_BPMPackage;
+import REA_EML.REA_EML_BPM.impl.REA_EML_BPMPackageImpl;
+import REA_EML.REA_EML_BPolM.REA_EML_BPolMPackage;
+import REA_EML.REA_EML_BPolM.impl.REA_EML_BPolMPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -106,24 +94,21 @@ public class REA_EMLPackageImpl extends EPackageImpl implements REA_EMLPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		REA_EML_ARPackageImpl theREA_EML_ARPackage = (REA_EML_ARPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_ARPackage.eNS_URI) instanceof REA_EML_ARPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_ARPackage.eNS_URI) : REA_EML_ARPackage.eINSTANCE);
-		REA_EML_BCPackageImpl theREA_EML_BCPackage = (REA_EML_BCPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCPackage.eNS_URI) instanceof REA_EML_BCPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCPackage.eNS_URI) : REA_EML_BCPackage.eINSTANCE);
-		REA_EML_BEPackageImpl theREA_EML_BEPackage = (REA_EML_BEPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BEPackage.eNS_URI) instanceof REA_EML_BEPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BEPackage.eNS_URI) : REA_EML_BEPackage.eINSTANCE);
-		REA_EML_BPPackageImpl theREA_EML_BPPackage = (REA_EML_BPPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPPackage.eNS_URI) instanceof REA_EML_BPPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPPackage.eNS_URI) : REA_EML_BPPackage.eINSTANCE);
+		REA_EML_BPMPackageImpl theREA_EML_BPMPackage = (REA_EML_BPMPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPMPackage.eNS_URI) instanceof REA_EML_BPMPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPMPackage.eNS_URI) : REA_EML_BPMPackage.eINSTANCE);
+		REA_EML_BCMPackageImpl theREA_EML_BCMPackage = (REA_EML_BCMPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCMPackage.eNS_URI) instanceof REA_EML_BCMPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCMPackage.eNS_URI) : REA_EML_BCMPackage.eINSTANCE);
+		REA_EML_BPolMPackageImpl theREA_EML_BPolMPackage = (REA_EML_BPolMPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPolMPackage.eNS_URI) instanceof REA_EML_BPolMPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPolMPackage.eNS_URI) : REA_EML_BPolMPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theREA_EMLPackage.createPackageContents();
-		theREA_EML_ARPackage.createPackageContents();
-		theREA_EML_BCPackage.createPackageContents();
-		theREA_EML_BEPackage.createPackageContents();
-		theREA_EML_BPPackage.createPackageContents();
+		theREA_EML_BPMPackage.createPackageContents();
+		theREA_EML_BCMPackage.createPackageContents();
+		theREA_EML_BPolMPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theREA_EMLPackage.initializePackageContents();
-		theREA_EML_ARPackage.initializePackageContents();
-		theREA_EML_BCPackage.initializePackageContents();
-		theREA_EML_BEPackage.initializePackageContents();
-		theREA_EML_BPPackage.initializePackageContents();
+		theREA_EML_BPMPackage.initializePackageContents();
+		theREA_EML_BCMPackage.initializePackageContents();
+		theREA_EML_BPolMPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theREA_EMLPackage.freeze();
@@ -261,16 +246,14 @@ public class REA_EMLPackageImpl extends EPackageImpl implements REA_EMLPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		REA_EML_ARPackage theREA_EML_ARPackage = (REA_EML_ARPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_ARPackage.eNS_URI);
-		REA_EML_BCPackage theREA_EML_BCPackage = (REA_EML_BCPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCPackage.eNS_URI);
-		REA_EML_BEPackage theREA_EML_BEPackage = (REA_EML_BEPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BEPackage.eNS_URI);
-		REA_EML_BPPackage theREA_EML_BPPackage = (REA_EML_BPPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPPackage.eNS_URI);
+		REA_EML_BPMPackage theREA_EML_BPMPackage = (REA_EML_BPMPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPMPackage.eNS_URI);
+		REA_EML_BCMPackage theREA_EML_BCMPackage = (REA_EML_BCMPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BCMPackage.eNS_URI);
+		REA_EML_BPolMPackage theREA_EML_BPolMPackage = (REA_EML_BPolMPackage)EPackage.Registry.INSTANCE.getEPackage(REA_EML_BPolMPackage.eNS_URI);
 
 		// Add subpackages
-		getESubpackages().add(theREA_EML_ARPackage);
-		getESubpackages().add(theREA_EML_BCPackage);
-		getESubpackages().add(theREA_EML_BEPackage);
-		getESubpackages().add(theREA_EML_BPPackage);
+		getESubpackages().add(theREA_EML_BPMPackage);
+		getESubpackages().add(theREA_EML_BCMPackage);
+		getESubpackages().add(theREA_EML_BPolMPackage);
 
 		// Create type parameters
 

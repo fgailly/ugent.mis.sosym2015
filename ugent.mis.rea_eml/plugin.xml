@@ -31,32 +31,24 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_AR"
-            class="REA_EML.REA_EML_AR.REA_EML_ARPackage"
+            uri="REA_EML_BPM"
+            class="REA_EML.REA_EML_BPM.REA_EML_BPMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_BC"
-            class="REA_EML.REA_EML_BC.REA_EML_BCPackage"
+            uri="REA_EML_BCM"
+            class="REA_EML.REA_EML_BCM.REA_EML_BCMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_BE"
-            class="REA_EML.REA_EML_BE.REA_EML_BEPackage"
-            genModel="model/REA-EML.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated REA-EML -->
-      <package
-            uri="REA_EML_BP"
-            class="REA_EML.REA_EML_BP.REA_EML_BPPackage"
+            uri="REA_EML_BPolM"
+            class="REA_EML.REA_EML_BPolM.REA_EML_BPolMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>
 

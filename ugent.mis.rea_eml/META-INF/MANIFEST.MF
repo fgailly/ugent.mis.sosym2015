@@ -8,6 +8,15 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: REA_EML,
+ REA_EML.REA_EML_BCM,
+ REA_EML.REA_EML_BCM.impl,
+ REA_EML.REA_EML_BCM.util,
+ REA_EML.REA_EML_BPM,
+ REA_EML.REA_EML_BPM.impl,
+ REA_EML.REA_EML_BPM.util,
+ REA_EML.REA_EML_BPolM,
+ REA_EML.REA_EML_BPolM.impl,
+ REA_EML.REA_EML_BPolM.util,
  REA_EML.REA_EML_AR,
  REA_EML.REA_EML_AR.impl,
  REA_EML.REA_EML_AR.util,
