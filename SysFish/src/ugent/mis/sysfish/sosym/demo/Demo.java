@@ -31,7 +31,7 @@ public class Demo {
 	public static void main(String[] args) {
 		try {
 			
-			StarDogOntology sysFish = new StarDogOntology("http://bizagi.ugent.be:5820/","admin","liesbeth1812", "SYSFISH");
+			StarDogOntology sysFish = new StarDogOntology("http://bizagi.ugent.be:5820/","admin","liesbeth", "SoSyM2015");
 			
 			Connection aConn = sysFish.getConnection();
 			ReasoningConnection aReasoningConn = sysFish.getReasoningConnection();
