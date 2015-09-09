@@ -94,6 +94,15 @@ public interface REA_EML_BCMFactory extends EFactory {
 	fulfillment createfulfillment();
 
 	/**
+	 * Returns a new object of class '<em>participation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>participation</em>'.
+	 * @generated
+	 */
+	participation createparticipation();
+
+	/**
 	 * Returns a new object of class '<em>duality</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,24 +119,6 @@ public interface REA_EML_BCMFactory extends EFactory {
 	 * @generated
 	 */
 	recicprocity createrecicprocity();
-
-	/**
-	 * Returns a new object of class '<em>provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>provides</em>'.
-	 * @generated
-	 */
-	provides createprovides();
-
-	/**
-	 * Returns a new object of class '<em>receives</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>receives</em>'.
-	 * @generated
-	 */
-	receives createreceives();
 
 	/**
 	 * Returns the package supported by this factory.

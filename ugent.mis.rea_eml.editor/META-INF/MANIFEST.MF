@@ -8,11 +8,7 @@ Bundle-Activator: REA_EML.presentation.REAEMLEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: REA_EML.REA_EML_AR.presentation,
- REA_EML.REA_EML_BC.presentation,
- REA_EML.REA_EML_BE.presentation,
- REA_EML.REA_EML_BP.presentation,
- REA_EML.REA_EML_BCM.presentation,
+Export-Package: REA_EML.REA_EML_BCM.presentation,
  REA_EML.REA_EML_BPM.presentation,
  REA_EML.REA_EML_BPolM.presentation,
  REA_EML.presentation

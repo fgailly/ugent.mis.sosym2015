@@ -7,11 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: REA_EML.REA_EML_AR.tests,
- REA_EML.REA_EML_BC.tests,
- REA_EML.REA_EML_BE.tests,
- REA_EML.REA_EML_BP.tests,
- REA_EML.REA_EML_BCM.tests,
+Export-Package: REA_EML.REA_EML_BCM.tests,
  REA_EML.REA_EML_BPM.tests,
  REA_EML.REA_EML_BPolM.tests,
  REA_EML.tests

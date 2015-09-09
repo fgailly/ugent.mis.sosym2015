@@ -192,12 +192,7 @@ public class BusinessCollaborationModelItemProvider extends ModelItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(REA_EML_BCMPackage.Literals.BUSINESS_COLLABORATION_MODEL__PARTICIPATIONS,
-				 REA_EML_BCMFactory.eINSTANCE.createprovides()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(REA_EML_BCMPackage.Literals.BUSINESS_COLLABORATION_MODEL__PARTICIPATIONS,
-				 REA_EML_BCMFactory.eINSTANCE.createreceives()));
+				 REA_EML_BCMFactory.eINSTANCE.createparticipation()));
 
 		newChildDescriptors.add
 			(createChildParameter

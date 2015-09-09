@@ -146,22 +146,6 @@ public class REA_EML_BCMSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case REA_EML_BCMPackage.PROVIDES: {
-				provides provides = (provides)theEObject;
-				T result = caseprovides(provides);
-				if (result == null) result = caseparticipation(provides);
-				if (result == null) result = caseModelElement(provides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case REA_EML_BCMPackage.RECEIVES: {
-				receives receives = (receives)theEObject;
-				T result = casereceives(receives);
-				if (result == null) result = caseparticipation(receives);
-				if (result == null) result = caseModelElement(receives);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -328,36 +312,6 @@ public class REA_EML_BCMSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caserecicprocity(recicprocity object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>provides</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseprovides(provides object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>receives</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>receives</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casereceives(receives object) {
 		return null;
 	}
 

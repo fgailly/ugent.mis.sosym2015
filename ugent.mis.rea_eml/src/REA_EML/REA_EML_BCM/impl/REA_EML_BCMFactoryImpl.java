@@ -65,10 +65,9 @@ public class REA_EML_BCMFactoryImpl extends EFactoryImpl implements REA_EML_BCMF
 			case REA_EML_BCMPackage.SPECIFICATION: return createspecification();
 			case REA_EML_BCMPackage.STOCKFLOW: return createstockflow();
 			case REA_EML_BCMPackage.FULFILLMENT: return createfulfillment();
+			case REA_EML_BCMPackage.PARTICIPATION: return createparticipation();
 			case REA_EML_BCMPackage.DUALITY: return createduality();
 			case REA_EML_BCMPackage.RECICPROCITY: return createrecicprocity();
-			case REA_EML_BCMPackage.PROVIDES: return createprovides();
-			case REA_EML_BCMPackage.RECEIVES: return createreceives();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -189,6 +188,16 @@ public class REA_EML_BCMFactoryImpl extends EFactoryImpl implements REA_EML_BCMF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public participation createparticipation() {
+		participationImpl participation = new participationImpl();
+		return participation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public duality createduality() {
 		dualityImpl duality = new dualityImpl();
 		return duality;
@@ -202,26 +211,6 @@ public class REA_EML_BCMFactoryImpl extends EFactoryImpl implements REA_EML_BCMF
 	public recicprocity createrecicprocity() {
 		recicprocityImpl recicprocity = new recicprocityImpl();
 		return recicprocity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public provides createprovides() {
-		providesImpl provides = new providesImpl();
-		return provides;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public receives createreceives() {
-		receivesImpl receives = new receivesImpl();
-		return receives;
 	}
 
 	/**

@@ -36,7 +36,7 @@ public enum EconomicEventType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRANSFORMATION(1, "transformation", "");
+	TRANSFORMATION(1, "transformation", "transformation");
 
 	/**
 	 * The '<em><b>Transfer</b></em>' literal value.
@@ -62,7 +62,7 @@ public enum EconomicEventType implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TRANSFORMATION
-	 * @model name="transformation" literal=""
+	 * @model name="transformation"
 	 * @generated
 	 * @ordered
 	 */

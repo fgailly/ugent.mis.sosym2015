@@ -7,16 +7,24 @@ import REA_EML.ModelElement;
 import REA_EML.Operator;
 import REA_EML.REA_EMLFactory;
 import REA_EML.REA_EMLPackage;
+
 import REA_EML.REA_EML_BCM.REA_EML_BCMPackage;
+
 import REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl;
+
 import REA_EML.REA_EML_BPM.REA_EML_BPMPackage;
+
 import REA_EML.REA_EML_BPM.impl.REA_EML_BPMPackageImpl;
+
 import REA_EML.REA_EML_BPolM.REA_EML_BPolMPackage;
+
 import REA_EML.REA_EML_BPolM.impl.REA_EML_BPolMPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**

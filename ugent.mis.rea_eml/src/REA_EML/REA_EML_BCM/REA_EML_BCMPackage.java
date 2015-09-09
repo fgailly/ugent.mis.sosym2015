@@ -674,134 +674,6 @@ public interface REA_EML_BCMPackage extends EPackage {
 	int RECICPROCITY_OPERATION_COUNT = REA_EMLPackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link REA_EML.REA_EML_BCM.impl.providesImpl <em>provides</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see REA_EML.REA_EML_BCM.impl.providesImpl
-	 * @see REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl#getprovides()
-	 * @generated
-	 */
-	int PROVIDES = 11;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES__NAME = PARTICIPATION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Economic Agent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES__ECONOMIC_AGENT = PARTICIPATION__ECONOMIC_AGENT;
-
-	/**
-	 * The feature id for the '<em><b>Economic Event</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES__ECONOMIC_EVENT = PARTICIPATION__ECONOMIC_EVENT;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES__TYPE = PARTICIPATION__TYPE;
-
-	/**
-	 * The number of structural features of the '<em>provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES_FEATURE_COUNT = PARTICIPATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDES_OPERATION_COUNT = PARTICIPATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link REA_EML.REA_EML_BCM.impl.receivesImpl <em>receives</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see REA_EML.REA_EML_BCM.impl.receivesImpl
-	 * @see REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl#getreceives()
-	 * @generated
-	 */
-	int RECEIVES = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES__NAME = PARTICIPATION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Economic Agent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES__ECONOMIC_AGENT = PARTICIPATION__ECONOMIC_AGENT;
-
-	/**
-	 * The feature id for the '<em><b>Economic Event</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES__ECONOMIC_EVENT = PARTICIPATION__ECONOMIC_EVENT;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES__TYPE = PARTICIPATION__TYPE;
-
-	/**
-	 * The number of structural features of the '<em>receives</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES_FEATURE_COUNT = PARTICIPATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>receives</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVES_OPERATION_COUNT = PARTICIPATION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link REA_EML.REA_EML_BCM.ParticipationType <em>Participation Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -809,7 +681,7 @@ public interface REA_EML_BCMPackage extends EPackage {
 	 * @see REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl#getParticipationType()
 	 * @generated
 	 */
-	int PARTICIPATION_TYPE = 13;
+	int PARTICIPATION_TYPE = 11;
 
 
 	/**
@@ -1154,26 +1026,6 @@ public interface REA_EML_BCMPackage extends EPackage {
 	EReference getrecicprocity_Commitment();
 
 	/**
-	 * Returns the meta object for class '{@link REA_EML.REA_EML_BCM.provides <em>provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>provides</em>'.
-	 * @see REA_EML.REA_EML_BCM.provides
-	 * @generated
-	 */
-	EClass getprovides();
-
-	/**
-	 * Returns the meta object for class '{@link REA_EML.REA_EML_BCM.receives <em>receives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>receives</em>'.
-	 * @see REA_EML.REA_EML_BCM.receives
-	 * @generated
-	 */
-	EClass getreceives();
-
-	/**
 	 * Returns the meta object for enum '{@link REA_EML.REA_EML_BCM.ParticipationType <em>Participation Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1483,26 +1335,6 @@ public interface REA_EML_BCMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RECICPROCITY__COMMITMENT = eINSTANCE.getrecicprocity_Commitment();
-
-		/**
-		 * The meta object literal for the '{@link REA_EML.REA_EML_BCM.impl.providesImpl <em>provides</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see REA_EML.REA_EML_BCM.impl.providesImpl
-		 * @see REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl#getprovides()
-		 * @generated
-		 */
-		EClass PROVIDES = eINSTANCE.getprovides();
-
-		/**
-		 * The meta object literal for the '{@link REA_EML.REA_EML_BCM.impl.receivesImpl <em>receives</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see REA_EML.REA_EML_BCM.impl.receivesImpl
-		 * @see REA_EML.REA_EML_BCM.impl.REA_EML_BCMPackageImpl#getreceives()
-		 * @generated
-		 */
-		EClass RECEIVES = eINSTANCE.getreceives();
 
 		/**
 		 * The meta object literal for the '{@link REA_EML.REA_EML_BCM.ParticipationType <em>Participation Type</em>}' enum.

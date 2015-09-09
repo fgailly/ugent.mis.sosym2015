@@ -15,8 +15,6 @@ import REA_EML.REA_EML_BCM.REA_EML_BCMPackage;
 import REA_EML.REA_EML_BCM.duality;
 import REA_EML.REA_EML_BCM.fulfillment;
 import REA_EML.REA_EML_BCM.participation;
-import REA_EML.REA_EML_BCM.provides;
-import REA_EML.REA_EML_BCM.receives;
 import REA_EML.REA_EML_BCM.recicprocity;
 import REA_EML.REA_EML_BCM.specification;
 import REA_EML.REA_EML_BCM.stockflow;
@@ -122,20 +120,6 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 	 * @generated
 	 */
 	private EClass recicprocityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass providesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass receivesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -509,24 +493,6 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getprovides() {
-		return providesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getreceives() {
-		return receivesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getParticipationType() {
 		return participationTypeEEnum;
 	}
@@ -602,10 +568,6 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 		recicprocityEClass = createEClass(RECICPROCITY);
 		createEReference(recicprocityEClass, RECICPROCITY__COMMITMENT);
 
-		providesEClass = createEClass(PROVIDES);
-
-		receivesEClass = createEClass(RECEIVES);
-
 		// Create enums
 		participationTypeEEnum = createEEnum(PARTICIPATION_TYPE);
 	}
@@ -652,8 +614,6 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 		participationEClass.getESuperTypes().add(theREA_EMLPackage.getModelElement());
 		dualityEClass.getESuperTypes().add(theREA_EMLPackage.getModelElement());
 		recicprocityEClass.getESuperTypes().add(theREA_EMLPackage.getModelElement());
-		providesEClass.getESuperTypes().add(this.getparticipation());
-		receivesEClass.getESuperTypes().add(this.getparticipation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(businessCollaborationModelEClass, BusinessCollaborationModel.class, "BusinessCollaborationModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -688,7 +648,7 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 		initEReference(getfulfillment_EconomicEvent(), this.getEconomicEvent(), null, "economicEvent", null, 1, 1, fulfillment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getfulfillment_Commitment(), this.getCommitment(), null, "commitment", null, 1, 1, fulfillment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(participationEClass, participation.class, "participation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(participationEClass, participation.class, "participation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getparticipation_EconomicAgent(), this.getEconomicAgent(), null, "economicAgent", null, 1, 1, participation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getparticipation_EconomicEvent(), this.getEconomicEvent(), null, "economicEvent", null, 1, 1, participation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getparticipation_Type(), this.getParticipationType(), "type", null, 0, 1, participation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -698,10 +658,6 @@ public class REA_EML_BCMPackageImpl extends EPackageImpl implements REA_EML_BCMP
 
 		initEClass(recicprocityEClass, recicprocity.class, "recicprocity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getrecicprocity_Commitment(), this.getCommitment(), null, "commitment", null, 2, 2, recicprocity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(providesEClass, provides.class, "provides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(receivesEClass, receives.class, "receives", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(participationTypeEEnum, ParticipationType.class, "ParticipationType");

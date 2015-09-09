@@ -256,6 +256,29 @@ public class REA_EML_BCMItemProviderAdapterFactory extends REA_EML_BCMAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link REA_EML.REA_EML_BCM.participation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected participationItemProvider participationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link REA_EML.REA_EML_BCM.participation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createparticipationAdapter() {
+		if (participationItemProvider == null) {
+			participationItemProvider = new participationItemProvider(this);
+		}
+
+		return participationItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link REA_EML.REA_EML_BCM.duality} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,52 +322,6 @@ public class REA_EML_BCMItemProviderAdapterFactory extends REA_EML_BCMAdapterFac
 		}
 
 		return recicprocityItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link REA_EML.REA_EML_BCM.provides} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected providesItemProvider providesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link REA_EML.REA_EML_BCM.provides}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createprovidesAdapter() {
-		if (providesItemProvider == null) {
-			providesItemProvider = new providesItemProvider(this);
-		}
-
-		return providesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link REA_EML.REA_EML_BCM.receives} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected receivesItemProvider receivesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link REA_EML.REA_EML_BCM.receives}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createreceivesAdapter() {
-		if (receivesItemProvider == null) {
-			receivesItemProvider = new receivesItemProvider(this);
-		}
-
-		return receivesItemProvider;
 	}
 
 	/**
@@ -454,10 +431,9 @@ public class REA_EML_BCMItemProviderAdapterFactory extends REA_EML_BCMAdapterFac
 		if (specificationItemProvider != null) specificationItemProvider.dispose();
 		if (stockflowItemProvider != null) stockflowItemProvider.dispose();
 		if (fulfillmentItemProvider != null) fulfillmentItemProvider.dispose();
+		if (participationItemProvider != null) participationItemProvider.dispose();
 		if (dualityItemProvider != null) dualityItemProvider.dispose();
 		if (recicprocityItemProvider != null) recicprocityItemProvider.dispose();
-		if (providesItemProvider != null) providesItemProvider.dispose();
-		if (receivesItemProvider != null) receivesItemProvider.dispose();
 	}
 
 }

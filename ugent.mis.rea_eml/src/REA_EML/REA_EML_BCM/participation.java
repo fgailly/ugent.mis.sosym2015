@@ -19,7 +19,7 @@ import REA_EML.ModelElement;
  * </p>
  *
  * @see REA_EML.REA_EML_BCM.REA_EML_BCMPackage#getparticipation()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface participation extends ModelElement {

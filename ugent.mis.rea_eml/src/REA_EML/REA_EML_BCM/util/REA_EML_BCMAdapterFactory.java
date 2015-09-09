@@ -115,14 +115,6 @@ public class REA_EML_BCMAdapterFactory extends AdapterFactoryImpl {
 				return createrecicprocityAdapter();
 			}
 			@Override
-			public Adapter caseprovides(provides object) {
-				return createprovidesAdapter();
-			}
-			@Override
-			public Adapter casereceives(receives object) {
-				return createreceivesAdapter();
-			}
-			@Override
 			public Adapter caseModel(Model object) {
 				return createModelAdapter();
 			}
@@ -301,34 +293,6 @@ public class REA_EML_BCMAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createrecicprocityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link REA_EML.REA_EML_BCM.provides <em>provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see REA_EML.REA_EML_BCM.provides
-	 * @generated
-	 */
-	public Adapter createprovidesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link REA_EML.REA_EML_BCM.receives <em>receives</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see REA_EML.REA_EML_BCM.receives
-	 * @generated
-	 */
-	public Adapter createreceivesAdapter() {
 		return null;
 	}
 

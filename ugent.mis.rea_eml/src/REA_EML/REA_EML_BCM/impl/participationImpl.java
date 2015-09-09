@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public abstract class participationImpl extends ModelElementImpl implements participation {
+public class participationImpl extends ModelElementImpl implements participation {
 	/**
 	 * The cached value of the '{@link #getEconomicAgent() <em>Economic Agent</em>}' reference.
 	 * <!-- begin-user-doc -->
