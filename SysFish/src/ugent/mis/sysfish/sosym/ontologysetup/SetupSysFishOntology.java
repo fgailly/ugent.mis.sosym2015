@@ -2,25 +2,25 @@ package ugent.mis.sysfish.sosym.ontologysetup;
 
 public class SetupSysFishOntology {
 	public static void main(String[] args) {
-		StarDogOntology sysFish = new StarDogOntology("http://bizagi.ugent.be:5820/","admin","liesbeth1812", "SYSFISH");
+		StarDogOntology sosym = new StarDogOntology("http://jools.ugent.be:5820/","admin","liesbeth", "SoSyM2015");
 		
-		sysFish.cleanStardogDB();
+		sosym.cleanStardogDB();
 		
-		sysFish.loadOntology("REA-EMO.owl");
-		sysFish.loadOntology("BMM.owl");
-		sysFish.loadOntology("SysFishBMM.owl");
-		sysFish.loadOntology("BMM_REA-EMO.owl");
-		sysFish.loadOntology("SyFishEntities.owl");
-		sysFish.loadOntology("SysfishCollaborationDiagram.owl");
-		sysFish.loadOntology("FishCleaningAR.owl");
-		sysFish.loadOntology("TruckAcquisitionAR.owl");
-		sysFish.loadOntology("FinancingAR.owl");
-		sysFish.loadOntology("FishPurchaseAR.owl");
-		sysFish.loadOntology("FishSellingAR.owl");
-		sysFish.loadOntology("PayrollAR.owl");
-		sysFish.loadOntology("FishPurchaseBP.owl");
+		sosym.loadOntology("REA-EMO.owl");
+		sosym.loadOntology("BMM.owl");
+		sosym.loadOntology("SysFishBMM.owl");
+		sosym.loadOntology("BMM_REA-EMO.owl");
+		sosym.loadOntology("SyFishEntities.owl");
+		sosym.loadOntology("SysfishCollaborationDiagram.owl");
+		sosym.loadOntology("FishCleaningAR.owl");
+		sosym.loadOntology("TruckAcquisitionAR.owl");
+		sosym.loadOntology("FinancingAR.owl");
+		sosym.loadOntology("FishPurchaseAR.owl");
+		sosym.loadOntology("FishSellingAR.owl");
+		sosym.loadOntology("PayrollAR.owl");
+		sosym.loadOntology("FishPurchaseBP.owl");
 		
-		sysFish.closeConnection();
+		sosym.closeConnection();
 		
 		System.out.println("Finish");
 	
