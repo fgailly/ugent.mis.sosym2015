@@ -88,7 +88,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="EconomicEventType">
       <eLiterals name="transfer"/>
-      <eLiterals name="transformation" value="1" literal=""/>
+      <eLiterals name="transformation" value="1" literal="transformation"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="REA_EML_BCM" nsURI="REA_EML_BCM" nsPrefix="REA_EML_BCM">
@@ -136,7 +136,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="1"
           eType="#//REA_EML_BCM/Commitment"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="participation" abstract="true" eSuperTypes="#//ModelElement">
+    <eClassifiers xsi:type="ecore:EClass" name="participation" eSuperTypes="#//ModelElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="economicAgent" lowerBound="1"
           eType="#//REA_EML_BCM/EconomicAgent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
@@ -151,8 +151,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="2"
           upperBound="2" eType="#//REA_EML_BCM/Commitment"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="provides" eSuperTypes="#//REA_EML_BCM/participation"/>
-    <eClassifiers xsi:type="ecore:EClass" name="receives" eSuperTypes="#//REA_EML_BCM/participation"/>
     <eClassifiers xsi:type="ecore:EEnum" name="ParticipationType">
       <eLiterals name="provide" literal="provide"/>
       <eLiterals name="receive" value="1" literal="receive"/>

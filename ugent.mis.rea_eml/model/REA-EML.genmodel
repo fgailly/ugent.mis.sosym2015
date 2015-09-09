@@ -142,8 +142,6 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference REA-EML.ecore#//REA_EML_BCM/recicprocity/commitment"/>
       </genClasses>
-      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BCM/provides"/>
-      <genClasses ecoreClass="REA-EML.ecore#//REA_EML_BCM/receives"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="REA_EML_BPolM" basePackage="REA_EML" disposableProviderFactory="true"
         ecorePackage="REA-EML.ecore#//REA_EML_BPolM">
