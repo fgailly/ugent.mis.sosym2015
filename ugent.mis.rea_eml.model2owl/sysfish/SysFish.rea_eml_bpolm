@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_BPolM:BusinessPolicyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_BPolM="REA_EML_BPolM">
+  <businessEntities name="Store"/>
+  <businessEntities name="Employee"/>
+  <businessEntities name="LeasingOrganisation"/>
+  <businessEntities name="Truck"/>
+  <businessEntities xsi:type="REA_EML_BPolM:PolicyEntityType" name="LaborType"/>
+  <businessEntities xsi:type="REA_EML_BPolM:PolicyEntityType" name="FishType"/>
+  <businessEntities name="Fish"/>
+  <businessEntities name="Labor"/>
+  <businessEntities name="Truck"/>
+  <businessRelationships name="isSpecialzedIn" businessEntities="//@businessEntities.0 //@businessEntities.5"/>
+  <businessRelationships xsi:type="REA_EML_BPolM:Typification" name="" policyEntityType="//@businessEntities.5" businessEntity="//@businessEntities.6"/>
+  <businessRelationships name="worksAt" businessEntities="//@businessEntities.1 //@businessEntities.0"/>
+  <businessRelationships name="performs" businessEntities="//@businessEntities.1 //@businessEntities.4"/>
+  <businessRelationships xsi:type="REA_EML_BPolM:Typification" policyEntityType="//@businessEntities.4" businessEntity="//@businessEntities.7"/>
+  <businessRelationships name="leasedFrom" businessEntities="//@businessEntities.2 //@businessEntities.8"/>
+</REA_EML_BPolM:BusinessPolicyModel>

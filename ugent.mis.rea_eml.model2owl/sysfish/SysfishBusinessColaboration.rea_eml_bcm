@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REA_EML_BCM:BusinessCollaborationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:REA_EML_BCM="REA_EML_BCM" name="SysfishCollaborationDiagram" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish">
+  <economicResources name="Fish"/>
+  <economicResources name="Cash"/>
+  <economicResources name="Labor"/>
+  <economicResources name="CleanedFish"/>
+  <economicResources name="Truck"/>
+  <economicAgents name="Fisherman"/>
+  <economicAgents name="SysFish"/>
+  <economicAgents name="Worker"/>
+  <economicAgents name="Customer"/>
+  <economicAgents name="TruckRental"/>
+  <economicEvents name="PaymentForFish"/>
+  <economicEvents name="FishPurchase"/>
+  <economicEvents name="CashDisbursementLabor"/>
+  <economicEvents name="LaborAcquisition"/>
+  <economicEvents name="SalePayment"/>
+  <economicEvents name="FishSale"/>
+  <economicEvents name="PaymentForTruck"/>
+  <economicEvents name="TruckLease"/>
+  <dualities name="" economicEvent="//@economicEvents.0 //@economicEvents.1"/>
+  <dualities economicEvent="//@economicEvents.2 //@economicEvents.3"/>
+  <dualities economicEvent="//@economicEvents.5 //@economicEvents.4"/>
+  <dualities economicEvent="//@economicEvents.6 //@economicEvents.7"/>
+  <stockflows economicEvent="//@economicEvents.0" economicResouce="//@economicResources.1"/>
+  <stockflows economicEvent="//@economicEvents.1" economicResouce="//@economicResources.0"/>
+  <stockflows economicEvent="//@economicEvents.2" economicResouce="//@economicResources.1"/>
+  <stockflows economicEvent="//@economicEvents.3" economicResouce="//@economicResources.2"/>
+  <stockflows economicEvent="//@economicEvents.4" economicResouce="//@economicResources.1"/>
+  <stockflows economicEvent="//@economicEvents.5" economicResouce="//@economicResources.3"/>
+  <stockflows economicEvent="//@economicEvents.6" economicResouce="//@economicResources.1"/>
+  <stockflows economicEvent="//@economicEvents.7" economicResouce="//@economicResources.4"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.0"/>
+  <participations economicAgent="//@economicAgents.0" economicEvent="//@economicEvents.0" type="receive"/>
+  <participations economicAgent="//@economicAgents.0" economicEvent="//@economicEvents.1"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.1" type="receive"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.2"/>
+  <participations economicAgent="//@economicAgents.2" economicEvent="//@economicEvents.2" type="receive"/>
+  <participations name="" economicAgent="//@economicAgents.2" economicEvent="//@economicEvents.3"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.3" type="receive"/>
+  <participations name="" economicAgent="//@economicAgents.3" economicEvent="//@economicEvents.4"/>
+  <participations economicAgent="//@economicAgents.0" economicEvent="//@economicEvents.4" type="receive"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.5"/>
+  <participations economicAgent="//@economicAgents.3" economicEvent="//@economicEvents.5" type="receive"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.6"/>
+  <participations economicAgent="//@economicAgents.4" economicEvent="//@economicEvents.6" type="receive"/>
+  <participations economicAgent="//@economicAgents.4" economicEvent="//@economicEvents.7"/>
+  <participations economicAgent="//@economicAgents.1" economicEvent="//@economicEvents.7" type="receive"/>
+</REA_EML_BCM:BusinessCollaborationModel>
