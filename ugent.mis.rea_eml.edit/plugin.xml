@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML"
+            uri="http://www.mis.ugent.be/rea_eml"
             class="REA_EML.provider.REA_EMLItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_BPM"
+            uri="http://www.mis.ugent.be/rea_eml_bpm"
             class="REA_EML.REA_EML_BPM.provider.REA_EML_BPMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -35,7 +35,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_BCM"
+            uri="http://www.mis.ugent.be/rea_eml_bcm"
             class="REA_EML.REA_EML_BCM.provider.REA_EML_BCMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -48,7 +48,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated REA-EML -->
       <factory
-            uri="REA_EML_BPolM"
+            uri="http://www.mis.ugent.be/rea_eml_bpolm"
             class="REA_EML.REA_EML_BPolM.provider.REA_EML_BPolMItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

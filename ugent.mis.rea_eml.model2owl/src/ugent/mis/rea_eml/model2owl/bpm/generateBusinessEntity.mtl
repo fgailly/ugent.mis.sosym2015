@@ -1,8 +1,0 @@
-[comment encoding = UTF-8 /]
-[module generateBusinessEntity('REA_EML_BP')]
-
-[template public generateElement(aBusinessEntity : REA_EML_BP::BusinessEntity, aREA_EML_BPM : REA_EML_BPM)]
- <owl:NamedIndividual rdf:about="&[aREA_EML_BPM.ontologyNS/];[aBusinessEntity.name/]">
- 	<rdf:type rdf:resource="&REA-EMO;BusinessEntity"/>
- </owl:NamedIndividual>
-[/template]

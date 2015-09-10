@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Model2owl Module Runtime Plug-in
-Bundle-SymbolicName: ugent.mis.rea_eml.model2owl
+Bundle-SymbolicName: ugent.mis.rea_eml.model2owl;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: ugent.mis.rea_eml.model2owl.Activator
 Bundle-Vendor: Eclipse Modeling Project
@@ -13,13 +13,14 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl.ecore,
  com.google.guava,
  org.eclipse.acceleo.engine,
- ugent.mis.bmm2;bundle-version="0.1.0"
+ ugent.mis.bmm2;bundle-version="0.1.0",
+ ugent.mis.rea_eml;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: ugent.mis.rea_eml.model2owl.arm,
- ugent.mis.rea_eml.model2owl.bcm,
- ugent.mis.rea_eml.model2owl.bem,
+Export-Package: ugent.mis.rea_eml.model2owl.bcm,
  ugent.mis.rea_eml.model2owl.bmm,
- ugent.mis.rea_eml.model2owl.bpm
+ ugent.mis.rea_eml.model2owl.bpm,
+ ugent.mis.rea_eml.model2owl.bpolm
+
 

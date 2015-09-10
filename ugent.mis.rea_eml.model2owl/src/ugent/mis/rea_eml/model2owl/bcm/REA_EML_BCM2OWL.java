@@ -22,7 +22,11 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
+import REA_EML.REA_EMLPackage;
+import REA_EML.REA_EML_BCM.REA_EML_BCMPackage;
 
 /**
  * Entry point of the 'REA_EML_BCM2OWL' generation module.
@@ -335,10 +339,12 @@ public class REA_EML_BCM2OWL extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * 
      */
-    @Override
+    
+
     public void registerPackages(ResourceSet resourceSet) {
+    	
         super.registerPackages(resourceSet);
         
         /*
@@ -360,12 +366,12 @@ public class REA_EML_BCM2OWL extends AbstractAcceleoGenerator {
          * If the package is located in another plug-in, already installed in Eclipse. The following content should
          * have been generated at the beginning of this method. Do not register the package using this mechanism if
          * the metamodel is located in the workspace.
-         *  
-         * if (!isInWorkspace(UMLPackage.class)) {
-         *     // The normal package registration if your metamodel is in a plugin.
-         *     resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
-         * }
-         * 
+         */
+        
+             EPackage.Registry.INSTANCE.put(REA_EML_BCMPackage.eNS_URI, REA_EML_BCMPackage.eINSTANCE); 
+             EPackage.Registry.INSTANCE.put(REA_EMLPackage.eNS_URI, REA_EMLPackage.eINSTANCE); 
+          
+         /* 
          * If the package is located in another project in your workspace, the plugin containing the package has not
          * been register by EMF and Acceleo should register it automatically. If you want to use the generator in
          * stand alone, the regular registration (seen a couple lines before) is needed.
@@ -379,7 +385,7 @@ public class REA_EML_BCM2OWL extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * 
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -400,7 +406,7 @@ public class REA_EML_BCM2OWL extends AbstractAcceleoGenerator {
          * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
          */ 
         
-        // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
+        //resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
     
 }

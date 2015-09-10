@@ -1,7 +1,0 @@
-[comment encoding = UTF-8 /]
-[module generatePolicyEntity('REA_EML_BE')]
-[template public generateElement(aPolicyEntity : PolicyEntity, aREA_EML_BEM : REA_EML_BEM)]
- <owl:NamedIndividual rdf:about="&[aREA_EML_BEM.ontologyNS/];[aPolicyEntity.name/]">
- 	<rdf:type rdf:resource="&REA-EMO;PolicyEntity"/>
- </owl:NamedIndividual>
-[/template]

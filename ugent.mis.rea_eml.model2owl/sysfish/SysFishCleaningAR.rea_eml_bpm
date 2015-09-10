@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<REA_EML_BPM:BusinessProcessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_BPM="REA_EML_BPM" name="FishCleaning" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish" organisationalUnit="SysFish" businessProcess="FishCleaning">
+<REA_EML_BPM:BusinessProcessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:REA_EML_BPM="http://www.mis.ugent.be/rea_eml_bpm" name="FishCleaning" ontologyURI="http://www.mis.ugent.be/ontologies/sysfish" ontologyNS="sysfish" organisationalUnit="SysFish" businessProcess="FishCleaning">
   <economicEvents xsi:type="REA_EML_BPM:IncrementEconomicEvent" name="CleanOut" type="transformation"/>
   <economicEvents xsi:type="REA_EML_BPM:DecrementEconomicEvent" name="CleanIn" type="transformation"/>
   <economicResources name="Fish"/>

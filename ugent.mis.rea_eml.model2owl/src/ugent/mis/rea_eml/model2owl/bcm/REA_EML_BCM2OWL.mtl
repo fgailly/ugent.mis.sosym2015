@@ -1,11 +1,11 @@
 [comment encoding = UTF-8 /]
-[module REA_EML_BCM2OWL('REA_EML_BC')/]
+[module REA_EML_BCM2OWL('http://www.mis.ugent.be/rea_eml_bcm')/]
 [import ugent::mis::rea_eml::model2owl::bcm::generateEconomicResource /]
 [import ugent::mis::rea_eml::model2owl::bcm::generateEconomicEvent /]
 [import ugent::mis::rea_eml::model2owl::bcm::generateEconomicAgent /]
 [import ugent::mis::rea_eml::model2owl::bcm::generateCommitment /]
 
-[template public REA_EML_BCM2OWL(aREA_EML_BCM : REA_EML_BCM)]
+[template public REA_EML_BCM2OWL(aREA_EML_BCM : BusinessCollaborationModel)]
 	
 [comment @main /]
 [file (aREA_EML_BCM.name.concat('.owl'), false, 'UTF-8')]
@@ -33,19 +33,19 @@
         <owl:imports rdf:resource="http://www.mis.ugent.be/ontologies/REA-EMO"/>
     </owl:Ontology>
 
-[for (aEconomicResource : REA_EML_BC::EconomicResource | aREA_EML_BCM.economicResources)]
+[for (aEconomicResource : EconomicResource | aREA_EML_BCM.economicResources)]
  [aEconomicResource.generateElement(aREA_EML_BCM)/]
 [/for]
 
-[for (aEconomicEvent : REA_EML_BC::EconomicEvent | aREA_EML_BCM.economicEvents)]
+[for (aEconomicEvent : REA_EML_BCM::EconomicEvent | aREA_EML_BCM.economicEvents)]
  [aEconomicEvent.generateElement(aREA_EML_BCM)/]
 [/for]
 
-[for (aCommitment : REA_EML_BC::Commitment | aREA_EML_BCM.commitments)]
+[for (aCommitment : REA_EML_BCM::Commitment | aREA_EML_BCM.commitments)]
  [aCommitment.generateElement(aREA_EML_BCM)/]
 [/for]
 
-[for (anEconomicAgent : REA_EML_BC::EconomicAgent | aREA_EML_BCM.economicAgents)]
+[for (anEconomicAgent : REA_EML_BCM::EconomicAgent | aREA_EML_BCM.economicAgents)]
  [anEconomicAgent.generateElement(aREA_EML_BCM)/]
 [/for]
 </rdf:RDF>

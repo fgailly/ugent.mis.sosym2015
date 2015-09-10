@@ -2,19 +2,19 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.mis.ugent.be/ontologies/REA-EMO" uri="REA-EMO.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="http://www.mis.ugent.be/ontologies/BMM_REA-EMO" uri="BMM_REA-EMO.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="http://www.mis.ugent.be/ontologies/REA-EMO" uri="REA-EMO.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="http://www.mis.ugent.be/ontologies/REA-EMR-CONSTRAINTS" uri="REA-EMO-CONSTRAINTS.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FinancingAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishCleaningAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishPurchaseAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishPurchaseBP.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishSellingAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="PayrollAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="SyFishEntities.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="SysfishCollaborationDiagram.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="TruckAcquisitionAR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="http://www.mis.ugent.be/ontologies/sysfish_bmm" uri="SysFishBMM.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1441783297584" name="http://www.ugent.mis.be/ontologies/BMM" uri="BMM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="http://www.mis.ugent.be/ontologies/BMM_REA-EMO" uri="BMM_REA-EMO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="http://www.mis.ugent.be/ontologies/REA-EMO" uri="REA-EMO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="http://www.mis.ugent.be/ontologies/REA-EMR-CONSTRAINTS" uri="REA-EMO-CONSTRAINTS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FinancingAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishCleaningAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishPurchaseAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishPurchaseBP.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="FishSellingAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="PayrollAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="SyFishEntities.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="SysfishCollaborationDiagram.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="duplicate:http://www.mis.ugent.be/ontologies/sysfish" uri="TruckAcquisitionAR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="http://www.mis.ugent.be/ontologies/sysfish_bmm" uri="SysFishBMM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441795219486" name="http://www.ugent.mis.be/ontologies/BMM" uri="BMM.owl"/>
     </group>
 </catalog>

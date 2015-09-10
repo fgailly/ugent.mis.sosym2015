@@ -1,7 +1,0 @@
-[comment encoding = UTF-8 /]
-[module generateTEst('REA_EML', 'REA_EML_AR', 'REA_EML_BC', 'REA_EML_BE', 'REA_EML_BP')]
-
-
-[template public generateElement(aModel : Model)]
-
-[/template]

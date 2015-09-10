@@ -31,7 +31,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_BPM"
+            uri="http://www.mis.ugent.be/rea_eml_bpm"
             class="REA_EML.REA_EML_BPM.REA_EML_BPMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>
@@ -39,7 +39,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_BCM"
+            uri="http://www.mis.ugent.be/rea_eml_bcm"
             class="REA_EML.REA_EML_BCM.REA_EML_BCMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>
@@ -47,7 +47,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated REA-EML -->
       <package
-            uri="REA_EML_BPolM"
+            uri="http://www.mis.ugent.be/rea_eml_bpolm"
             class="REA_EML.REA_EML_BPolM.REA_EML_BPolMPackage"
             genModel="model/REA-EML.genmodel"/>
    </extension>

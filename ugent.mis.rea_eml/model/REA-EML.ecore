@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="REA_EML" nsURI="REA_EML" nsPrefix="REA_EML">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="REA_EML" nsURI="http://www.mis.ugent.be/rea_eml" nsPrefix="REA_EML">
   <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eLiterals name="equals"/>
     <eLiterals name="lessThan" value="1"/>
@@ -15,7 +15,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ontologyURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ontologyNS" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eSubpackages name="REA_EML_BPM" nsURI="REA_EML_BPM" nsPrefix="REA_EML_BPM">
+  <eClassifiers xsi:type="ecore:EEnum" name="ParticipationType">
+    <eLiterals name="provide" literal="provide"/>
+    <eLiterals name="receive" value="1" literal="receive"/>
+  </eClassifiers>
+  <eSubpackages name="REA_EML_BPM" nsURI="http://www.mis.ugent.be/rea_eml_bpm" nsPrefix="REA_EML_BPM">
     <eClassifiers xsi:type="ecore:EClass" name="IncrementEconomicEvent" eSuperTypes="#//REA_EML_BPM/EconomicEvent"/>
     <eClassifiers xsi:type="ecore:EClass" name="DecrementEconomicEvent" eSuperTypes="#//REA_EML_BPM/EconomicEvent"/>
     <eClassifiers xsi:type="ecore:EClass" name="duality" eSuperTypes="#//ModelElement">
@@ -91,7 +95,7 @@
       <eLiterals name="transformation" value="1" literal="transformation"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="REA_EML_BCM" nsURI="REA_EML_BCM" nsPrefix="REA_EML_BCM">
+  <eSubpackages name="REA_EML_BCM" nsURI="http://www.mis.ugent.be/rea_eml_bcm" nsPrefix="REA_EML_BCM">
     <eClassifiers xsi:type="ecore:EClass" name="BusinessCollaborationModel" eSuperTypes="#//Model">
       <eStructuralFeatures xsi:type="ecore:EReference" name="economicResources" upperBound="-1"
           eType="#//REA_EML_BCM/EconomicResource" containment="true"/>
@@ -141,7 +145,7 @@
           eType="#//REA_EML_BCM/EconomicAgent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="1"
           eType="#//REA_EML_BCM/EconomicEvent"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//REA_EML_BCM/ParticipationType"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ParticipationType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="duality" eSuperTypes="#//ModelElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="economicEvent" lowerBound="2"
@@ -151,12 +155,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="commitment" lowerBound="2"
           upperBound="2" eType="#//REA_EML_BCM/Commitment"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="ParticipationType">
-      <eLiterals name="provide" literal="provide"/>
-      <eLiterals name="receive" value="1" literal="receive"/>
-    </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="REA_EML_BPolM" nsURI="REA_EML_BPolM" nsPrefix="REA_EML_BPolM">
+  <eSubpackages name="REA_EML_BPolM" nsURI="http://www.mis.ugent.be/rea_eml_bpolm"
+      nsPrefix="REA_EML_BPolM">
     <eClassifiers xsi:type="ecore:EClass" name="BusinessPolicyModel" eSuperTypes="#//Model">
       <eStructuralFeatures xsi:type="ecore:EReference" name="businessEntities" upperBound="-1"
           eType="#//REA_EML_BPolM/BusinessEntity" containment="true"/>
